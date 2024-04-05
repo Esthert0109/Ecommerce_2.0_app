@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'Constants/colorConstants.dart';
 import 'Pages/homePage.dart';
 
@@ -41,6 +41,7 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        textTheme: GoogleFonts.notoSansScTextTheme(),
         colorScheme: ColorScheme.fromSeed(seedColor: kMainGreenColor),
         useMaterial3: true,
       ),
