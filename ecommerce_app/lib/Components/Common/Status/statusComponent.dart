@@ -69,6 +69,7 @@ class CustomBottomSheet {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     SubmitButtonComponent(
+                      isLoading: false,
                       buttonText: "返回登录",
                       buttonTextStyle: tSubmitButtonText,
                       onPressed: () {

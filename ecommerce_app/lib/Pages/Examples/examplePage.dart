@@ -1,11 +1,13 @@
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
+import '../../Components/Common/Loading/explorePostDetailLoadingComponent.dart';
+import '../../Components/Common/Loading/explorePostLoadingComponent.dart';
+import '../../Components/Common/Loading/inventoryLoading.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
@@ -19,6 +21,7 @@ class ExamplesPage extends StatefulWidget {
 
 class _ExamplesPageState extends State<ExamplesPage> {
   int titleSelection = 0;
+  bool _isLoading = false;
   final _formKey = GlobalKey<FormState>();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController =
@@ -41,22 +44,41 @@ class _ExamplesPageState extends State<ExamplesPage> {
               buttonText: "确认",
               buttonTextStyle: tSubmitButtonText,
               onPressed: () {},
+              isLoading: false,
             ),
             SubmitButtonComponent(
               buttonText: "返回登陆",
               buttonTextStyle: tSubmitButtonText,
               onPressed: () {},
+              isLoading: false,
             ),
             SubmitButtonComponent(
               buttonText: "保存",
               buttonTextStyle: tSubmitButtonText,
               onPressed: () {},
+              isLoading: false,
             ),
             Text("Disable Submit Button: "),
             SubmitButtonComponent(
               buttonText: "确认",
               buttonTextStyle: tSubmitButtonText,
-              onPressed: null,
+              isLoading: false,
+            ),
+            Text("Submit Button Loading: "),
+            SubmitButtonComponent(
+              buttonText: "确认",
+              buttonTextStyle: tSubmitButtonText,
+              isLoading: true,
+            ),
+            SubmitButtonComponent(
+              buttonText: "点击一下",
+              buttonTextStyle: tSubmitButtonText,
+              isLoading: _isLoading,
+              onPressed: () {
+                setState(() {
+                  _isLoading = !_isLoading;
+                });
+              },
             ),
             Divider(),
             Text("Primary Button: "),
@@ -351,9 +373,6 @@ class _ExamplesPageState extends State<ExamplesPage> {
                       },
                       onChanged: (value) {},
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
                     TextFieldComponent(
                       isPassword: true,
                       controller: confirmPasswordController,
@@ -398,12 +417,14 @@ class _ExamplesPageState extends State<ExamplesPage> {
                           _formKey.currentState!.save();
                         }
                       },
+                      isLoading: false,
                     ),
                   ],
                 )),
             Divider(),
             Text("Status: "),
             SubmitButtonComponent(
+              isLoading: false,
               buttonText: AppLocalizations.of(context)!.statusRegisSuccessful,
               buttonTextStyle: tSubmitButtonText,
               onPressed: () {
@@ -414,6 +435,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
               },
             ),
             SubmitButtonComponent(
+              isLoading: false,
               buttonText:
                   AppLocalizations.of(context)!.statusPassResetSuccessful,
               buttonTextStyle: tSubmitButtonText,
@@ -423,6 +445,63 @@ class _ExamplesPageState extends State<ExamplesPage> {
                   AppLocalizations.of(context)!.statusPassResetSuccessful,
                 );
               },
+            ),
+            Divider(),
+            Text("Loading Examples: "),
+            Container(
+              height: 100,
+              color: kMainGreenColor,
+              child: Center(
+                child: LoadingAnimationWidget.prograssiveDots(
+                    color: kMainWhiteColor, size: 50),
+              ),
+            ),
+            SizedBox(
+              height: 100,
+              child: Center(
+                child: LoadingAnimationWidget.prograssiveDots(
+                    color: kMainGreenColor, size: 50),
+              ),
+            ),
+            Text("Post Loading Examples: "),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return const ExplorePostLoadingComponent();
+                },
+              ),
+            ),
+            Text("Post Details Loading Examples: "),
+            const ExplorePostDetailLoadingComponent(),
+            const SizedBox(
+              height: 100,
+            ),
+            Text("Inventory Loading Examples: "),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return const InventoryLoadingComponent();
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             SizedBox(height: 50),
           ],

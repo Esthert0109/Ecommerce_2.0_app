@@ -1,16 +1,13 @@
-import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
 import 'package:ecommerce_app/Pages/Examples/examplePage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:shimmer/shimmer.dart';
 
-import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
-import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
-import '../Examples/pageSlidingExample.dart';
 
 class ExploreMainPage extends StatefulWidget {
   const ExploreMainPage({super.key});
@@ -55,7 +52,9 @@ class _ExploreMainPageState extends State<ExploreMainPage> {
                           Get.to(() => ExamplesPage(),
                               transition: Transition.rightToLeftWithFade);
                         },
+                        isLoading: false,
                       )),
+                  
                 ]),
           ),
         ),

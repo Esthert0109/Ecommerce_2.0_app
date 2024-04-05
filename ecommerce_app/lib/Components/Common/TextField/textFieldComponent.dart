@@ -30,39 +30,42 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      obscureText: widget.isPassword ? _obscureText : false,
-      controller: widget.controller,
-      onChanged: widget.onChanged,
-      validator: widget.validator,
-      decoration: InputDecoration(
-        suffixIcon: widget.isPassword
-            ? IconButton(
-                icon: Icon(
-                  _obscureText ? Icons.visibility_off : Icons.visibility,
-                  color: kMainBlackColor,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _obscureText = !_obscureText;
-                  });
-                },
-              )
-            : null,
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: Colors.red, width: 1.6),
-        ),
-        filled: true,
-        fillColor: kInputFormFieldColor1,
-        hintText: widget.isPassword
-            ? AppLocalizations.of(context)!.passwordhint
-            : widget.hintText,
-        hintStyle: tInputFieldText,
-        contentPadding: const EdgeInsets.all(10),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide.none,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: TextFormField(
+        obscureText: widget.isPassword ? _obscureText : false,
+        controller: widget.controller,
+        onChanged: widget.onChanged,
+        validator: widget.validator,
+        decoration: InputDecoration(
+          suffixIcon: widget.isPassword
+              ? IconButton(
+                  icon: Icon(
+                    _obscureText ? Icons.visibility_off : Icons.visibility,
+                    color: kMainBlackColor,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _obscureText = !_obscureText;
+                    });
+                  },
+                )
+              : null,
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(color: Colors.red, width: 1.6),
+          ),
+          filled: true,
+          fillColor: kInputFormFieldColor1,
+          hintText: widget.isPassword
+              ? AppLocalizations.of(context)!.passwordhint
+              : widget.hintText,
+          hintStyle: tInputFieldText,
+          contentPadding: const EdgeInsets.all(10),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
         ),
       ),
     );
