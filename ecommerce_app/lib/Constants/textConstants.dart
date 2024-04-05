@@ -105,3 +105,10 @@ const tInputFieldText = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: kMainBlackColor);
+
+//Status
+const tStatusFieldText = TextStyle(
+    fontFamily: 'Noto Sans SC',
+    fontSize: 30,
+    fontWeight: FontWeight.w700,
+    color: kMainBlackColor);

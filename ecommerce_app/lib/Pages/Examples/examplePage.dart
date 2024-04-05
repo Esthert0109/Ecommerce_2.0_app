@@ -14,6 +14,7 @@ import '../../Components/Common/Loading/orderLoadingComponent.dart';
 import '../../Components/Common/Loading/orderStatusDetailLoadingComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
+import '../../Components/Common/Status/statusComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
@@ -424,6 +425,31 @@ class _ExamplesPageState extends State<ExamplesPage> {
                     ),
                   ],
                 )),
+            Divider(),
+            Text("Status: "),
+            SubmitButtonComponent(
+              isLoading: false,
+              buttonText: AppLocalizations.of(context)!.statusRegisSuccessful,
+              buttonTextStyle: tSubmitButtonText,
+              onPressed: () {
+                CustomBottomSheet.show(
+                  context,
+                  AppLocalizations.of(context)!.statusRegisSuccessful,
+                );
+              },
+            ),
+            SubmitButtonComponent(
+              isLoading: false,
+              buttonText:
+                  AppLocalizations.of(context)!.statusPassResetSuccessful,
+              buttonTextStyle: tSubmitButtonText,
+              onPressed: () {
+                CustomBottomSheet.show(
+                  context,
+                  AppLocalizations.of(context)!.statusPassResetSuccessful,
+                );
+              },
+            ),
             Divider(),
             Text("Loading Examples: "),
             Container(

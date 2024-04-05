@@ -16,6 +16,10 @@
     "valiPassAtLeast8": "Password must be at least 8 characters long",
     "valiPassAtLeast1U": "Password must contain at least one uppercase letter",
     "valiPassAtLeast1L": "Password must contain at least one lowercase letter",
-    "valiPassNoMatch": "Password and confirm password do not match"
+    "valiPassNoMatch": "Password and confirm password do not match",
+
+    "statusSuccessful":"Successful",
+    "statusRegisSuccessful":"Register Successful.",
+    "statusPassResetSuccessful":"Password Reset Successful."
     
 }
