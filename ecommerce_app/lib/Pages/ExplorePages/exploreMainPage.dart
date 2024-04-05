@@ -54,6 +54,7 @@ class _ExploreMainPageState extends State<ExploreMainPage> {
                         },
                         isLoading: false,
                       )),
+                  
                 ]),
           ),
         ),

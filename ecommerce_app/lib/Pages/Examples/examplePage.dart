@@ -4,7 +4,9 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
+import '../../Components/Common/Loading/explorePostDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/explorePostLoadingComponent.dart';
+import '../../Components/Common/Loading/inventoryLoading.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
@@ -363,8 +365,28 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 },
               ),
             ),
+            Text("Post Details Loading Examples: "),
+            const ExplorePostDetailLoadingComponent(),
+            const SizedBox(
+              height: 100,
+            ),
             Text("Inventory Loading Examples: "),
             SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return const InventoryLoadingComponent();
+                },
+              ),
+            ),
+            const SizedBox(
               height: 50,
             )
           ],
