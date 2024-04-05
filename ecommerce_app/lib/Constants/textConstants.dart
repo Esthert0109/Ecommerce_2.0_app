@@ -95,6 +95,6 @@ const tTitleSelectedText = TextStyle(
     color: kMainBlackColor);
 const tTitleUnselectedText = TextStyle(
     fontFamily: 'Noto Sans SC',
-    fontSize: 22,
-    fontWeight: FontWeight.w700,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
     color: kMainBlackColor);

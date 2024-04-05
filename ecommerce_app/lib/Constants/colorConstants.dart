@@ -6,6 +6,7 @@ const kMainGreenColor = Color(0XFF689060);
 const kMainOrangeColor = Color(0XFFDA4827);
 const kBackgroundGradientStart = Color(0xffF7FFF1);
 const kBackgroundGradientEnd = Color(0xffF9F9F9);
+const kAppbarBackgroundColor = Colors.transparent;
 
 // Button Color
 const kSubmitButtonColor = Color(0XFF689060);
