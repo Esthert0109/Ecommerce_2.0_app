@@ -4,6 +4,7 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
+import '../../Components/Common/Loading/explorePostLoadingComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
@@ -346,6 +347,23 @@ class _ExamplesPageState extends State<ExamplesPage> {
                     color: kMainGreenColor, size: 50),
               ),
             ),
+            Text("Post Loading Examples: "),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return const ExplorePostLoadingComponent();
+                },
+              ),
+            ),
+            Text("Inventory Loading Examples: "),
             SizedBox(
               height: 50,
             )
