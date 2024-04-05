@@ -86,3 +86,15 @@ const tTagUnselectionSelectedText = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: kMainBlackColor);
+
+// Title
+const tTitleSelectedText = TextStyle(
+    fontFamily: 'Noto Sans SC',
+    fontSize: 22,
+    fontWeight: FontWeight.w700,
+    color: kMainBlackColor);
+const tTitleUnselectedText = TextStyle(
+    fontFamily: 'Noto Sans SC',
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    color: kMainBlackColor);

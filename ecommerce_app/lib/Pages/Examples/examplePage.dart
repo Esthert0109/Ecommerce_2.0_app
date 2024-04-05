@@ -5,10 +5,18 @@ import 'package:get/get.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
+import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
-class ExamplesPage extends StatelessWidget {
+class ExamplesPage extends StatefulWidget {
+  @override
+  State<ExamplesPage> createState() => _ExamplesPageState();
+}
+
+class _ExamplesPageState extends State<ExamplesPage> {
+  int titleSelection = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -246,6 +254,60 @@ class ExamplesPage extends StatelessWidget {
                 buttonText: "待付款",
                 buttonTextStyle: tSecondaryButtonText7,
                 onPressed: () {},
+              ),
+            ),
+            Divider(),
+            Text("Title component: "),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TitleComponent(
+                titles: ["商城", "我的"],
+                selectedIndex: titleSelection,
+                isCart: false,
+                onTap: (index) {
+                  setState(() {
+                    titleSelection = index;
+                  });
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TitleComponent(
+                titles: ["发现"],
+                selectedIndex: titleSelection,
+                isCart: false,
+                onTap: (index) {
+                  setState(() {
+                    titleSelection = index;
+                  });
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TitleComponent(
+                titles: ["福利"],
+                selectedIndex: titleSelection,
+                isCart: false,
+                onTap: (index) {
+                  setState(() {
+                    titleSelection = index;
+                  });
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TitleComponent(
+                titles: ["购物车"],
+                selectedIndex: titleSelection,
+                isCart: true,
+                onTap: (index) {
+                  setState(() {
+                    titleSelection = index;
+                  });
+                },
               ),
             ),
             SizedBox(
