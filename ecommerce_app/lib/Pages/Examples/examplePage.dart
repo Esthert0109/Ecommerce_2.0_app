@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-import '../Components/Common/Button/primaryButtonComponent.dart';
-import '../Components/Common/Button/submitButtonComponent.dart';
-import '../Constants/colorConstants.dart';
-import '../Constants/textConstants.dart';
+import '../../Components/Common/Button/primaryButtonComponent.dart';
+import '../../Components/Common/Button/submitButtonComponent.dart';
+import '../../Constants/colorConstants.dart';
+import '../../Constants/textConstants.dart';
 
 class ExamplesPage extends StatelessWidget {
   @override

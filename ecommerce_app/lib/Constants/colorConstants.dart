@@ -28,6 +28,11 @@ const kSecondaryButtonColor6 = Colors.transparent;
 
 const kSecondaryButtonPressedColor = Color.fromARGB(255, 178, 184, 176);
 
+// Selection Button Color
+const kTagSelectedColor = Color(0XFF333333);
+const kTagUnselectedColor = Color(0xffDDDDDD);
+const kTagSelectionPressedColor = Color.fromARGB(255, 238, 238, 238);
+
 // Text Color
 const kBottomNaviBarTextColor = Color(0XFF689060);
 const kBottomNaviBarTextColor2 = Color(0XFFA5A5A5);

@@ -74,3 +74,15 @@ const tSecondaryButtonText7 = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
     color: kSecondaryButtonTextColor3);
+
+// Selection
+const tTagSelectionSelectedText = TextStyle(
+    fontFamily: 'Noto Sans SC',
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: kMainBlackColor);
+const tTagUnselectionSelectedText = TextStyle(
+    fontFamily: 'Noto Sans SC',
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: kMainBlackColor);

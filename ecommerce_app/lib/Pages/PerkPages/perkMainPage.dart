@@ -21,7 +21,7 @@ class _PerkMainPageState extends State<PerkMainPage> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [kBackgroundGradientStart, kBackgroundGradientEnd],
-                  stops: [0.0, 0.5])),
+                  stops: [0.0, 0.3])),
           child: Center(
             child: Text("福利"),
           ),
