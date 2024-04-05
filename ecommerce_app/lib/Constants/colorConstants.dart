@@ -6,6 +6,7 @@ const kMainGreenColor = Color(0XFF689060);
 const kMainOrangeColor = Color(0XFFDA4827);
 const kBackgroundGradientStart = Color(0xffF7FFF1);
 const kBackgroundGradientEnd = Color(0xffF9F9F9);
+const kAppbarBackgroundColor = Colors.transparent;
 
 // Button Color
 const kSubmitButtonColor = Color(0XFF689060);
@@ -32,6 +33,8 @@ const kSecondaryButtonPressedColor = Color.fromARGB(255, 178, 184, 176);
 const kTagSelectedColor = Color(0XFF333333);
 const kTagUnselectedColor = Color(0xffDDDDDD);
 const kTagSelectionPressedColor = Color.fromARGB(255, 238, 238, 238);
+const kTitleSelectedColor = Color(0xff95CE8A);
+const kTitleUnselectedColor = Colors.transparent;
 
 // Text Color
 const kBottomNaviBarTextColor = Color(0XFF689060);

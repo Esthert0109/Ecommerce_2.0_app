@@ -1,5 +1,4 @@
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
-import 'package:ecommerce_app/Components/Common/TextField/textFieldComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -7,15 +6,24 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
+import '../../Components/Common/Selection/titleComponent.dart';
+import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
-class ExamplesPage extends StatelessWidget {
+class ExamplesPage extends StatefulWidget {
+  @override
+  State<ExamplesPage> createState() => _ExamplesPageState();
+}
+
+class _ExamplesPageState extends State<ExamplesPage> {
+  int titleSelection = 0;
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -255,8 +263,59 @@ class ExamplesPage extends StatelessWidget {
                 onPressed: () {},
               ),
             ),
-            SizedBox(
-              height: 10,
+            Divider(),
+            Text("Title component: "),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TitleComponent(
+                titles: ["商城", "我的"],
+                selectedIndex: titleSelection,
+                isCart: false,
+                onTap: (index) {
+                  setState(() {
+                    titleSelection = index;
+                  });
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TitleComponent(
+                titles: ["发现"],
+                selectedIndex: titleSelection,
+                isCart: false,
+                onTap: (index) {
+                  setState(() {
+                    titleSelection = index;
+                  });
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TitleComponent(
+                titles: ["福利"],
+                selectedIndex: titleSelection,
+                isCart: false,
+                onTap: (index) {
+                  setState(() {
+                    titleSelection = index;
+                  });
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TitleComponent(
+                titles: ["购物车"],
+                selectedIndex: titleSelection,
+                isCart: true,
+                onTap: (index) {
+                  setState(() {
+                    titleSelection = index;
+                  });
+                },
+              ),
             ),
             Divider(),
             Text("Input Field: "),
