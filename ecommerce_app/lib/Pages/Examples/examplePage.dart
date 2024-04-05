@@ -7,6 +7,7 @@ import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
 import '../../Components/Common/Loading/explorePostDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/explorePostLoadingComponent.dart';
+import '../../Components/Common/Loading/inventoryDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/inventoryLoading.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
@@ -476,6 +477,11 @@ class _ExamplesPageState extends State<ExamplesPage> {
             ),
             const SizedBox(
               height: 10,
+            ),
+            Text("Inventory Detail Loading Examples: "),
+            InventoryDetailLoadingComponent(),
+            const SizedBox(
+              height: 100,
             ),
             SizedBox(height: 50),
           ],

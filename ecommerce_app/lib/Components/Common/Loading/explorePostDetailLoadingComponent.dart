@@ -14,7 +14,7 @@ class ExplorePostDetailLoadingComponent extends StatelessWidget {
       enabled: true,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
             width: 375,
