@@ -372,63 +372,6 @@ class _ExamplesPageState extends State<ExamplesPage> {
                       },
                       onChanged: (value) {},
                     ),
-                    Divider(),
-                    Text("Loading Examples: "),
-                    Container(
-                      height: 100,
-                      color: kMainGreenColor,
-                      child: Center(
-                        child: LoadingAnimationWidget.prograssiveDots(
-                            color: kMainWhiteColor, size: 50),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 100,
-                      child: Center(
-                        child: LoadingAnimationWidget.prograssiveDots(
-                            color: kMainGreenColor, size: 50),
-                      ),
-                    ),
-                    Text("Post Loading Examples: "),
-                    SizedBox(
-                      height: 500,
-                      child: GridView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 10,
-                            childAspectRatio: 0.7),
-                        itemCount: 4,
-                        itemBuilder: (context, index) {
-                          return const ExplorePostLoadingComponent();
-                        },
-                      ),
-                    ),
-                    Text("Post Details Loading Examples: "),
-                    const ExplorePostDetailLoadingComponent(),
-                    const SizedBox(
-                      height: 100,
-                    ),
-                    Text("Inventory Loading Examples: "),
-                    SizedBox(
-                      height: 500,
-                      child: GridView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 1,
-                            childAspectRatio: 0.7),
-                        itemCount: 4,
-                        itemBuilder: (context, index) {
-                          return const InventoryLoadingComponent();
-                        },
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
                     TextFieldComponent(
                       isPassword: true,
                       controller: confirmPasswordController,
@@ -477,6 +420,63 @@ class _ExamplesPageState extends State<ExamplesPage> {
                     ),
                   ],
                 )),
+            Divider(),
+            Text("Loading Examples: "),
+            Container(
+              height: 100,
+              color: kMainGreenColor,
+              child: Center(
+                child: LoadingAnimationWidget.prograssiveDots(
+                    color: kMainWhiteColor, size: 50),
+              ),
+            ),
+            SizedBox(
+              height: 100,
+              child: Center(
+                child: LoadingAnimationWidget.prograssiveDots(
+                    color: kMainGreenColor, size: 50),
+              ),
+            ),
+            Text("Post Loading Examples: "),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return const ExplorePostLoadingComponent();
+                },
+              ),
+            ),
+            Text("Post Details Loading Examples: "),
+            const ExplorePostDetailLoadingComponent(),
+            const SizedBox(
+              height: 100,
+            ),
+            Text("Inventory Loading Examples: "),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return const InventoryLoadingComponent();
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             SizedBox(height: 50),
           ],
         ),
