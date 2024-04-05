@@ -6,6 +6,8 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../Components/Common/Button/submitButtonComponent.dart';
+import '../../Components/Common/Loading/addressLoadingComponent.dart';
+import '../../Components/Common/Loading/orderLoadingComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 

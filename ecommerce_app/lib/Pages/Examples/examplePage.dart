@@ -11,6 +11,7 @@ import '../../Components/Common/Loading/explorePostLoadingComponent.dart';
 import '../../Components/Common/Loading/inventoryDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/inventoryLoading.dart';
 import '../../Components/Common/Loading/orderLoadingComponent.dart';
+import '../../Components/Common/Loading/orderStatusDetailLoadingComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Constants/colorConstants.dart';
@@ -497,6 +498,9 @@ class _ExamplesPageState extends State<ExamplesPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: List.generate(3, (index) => AddressLoadingComponent()),
             ),
+            Text("Order Status Detail Loading Examples: "),
+            const OrderStatusDetailLoadingComponent(),
+            const SizedBox(height: 50),
             SizedBox(height: 50),
           ],
         ),
