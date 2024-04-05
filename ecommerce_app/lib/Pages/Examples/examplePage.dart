@@ -13,6 +13,7 @@ import '../../Components/Common/Loading/inventoryLoading.dart';
 import '../../Components/Common/Loading/orderLoadingComponent.dart';
 import '../../Components/Common/Loading/orderStatusDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/pointLoadingComponent.dart';
+import '../../Components/Common/Loading/pointRuleLoadingComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
@@ -531,6 +532,11 @@ class _ExamplesPageState extends State<ExamplesPage> {
             Text("Point Loading Examples: "),
             Column(
               children: List.generate(5, (index) => PointLoadingComponent()),
+            ),
+            Text("Point Rule Loading Examples: "),
+            Column(
+              children:
+                  List.generate(3, (index) => PointRuleLoadingComponent()),
             ),
             SizedBox(height: 50),
           ],
