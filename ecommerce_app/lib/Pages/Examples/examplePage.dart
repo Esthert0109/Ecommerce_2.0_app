@@ -1,7 +1,9 @@
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
+import 'package:ecommerce_app/Components/Common/TextField/textFieldComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
@@ -9,6 +11,11 @@ import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
 class ExamplesPage extends StatelessWidget {
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -249,8 +256,92 @@ class ExamplesPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 50,
-            )
+              height: 10,
+            ),
+            Divider(),
+            Text("Input Field: "),
+            Form(
+                key: _formKey,
+                child: Column(
+                  children: <Widget>[
+                    TextFieldComponent(
+                      isPassword: true,
+                      controller: passwordController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          // return '密码不能为空';
+                          return AppLocalizations.of(context)!.valiPassNoEmpty;
+                        } else if (value.length < 8) {
+                          // return '密码至少需要8个字符';
+                          return AppLocalizations.of(context)!.valiPassAtLeast8;
+                        } else if (!value.contains(RegExp(r'[A-Z]'))) {
+                          // return '密码必须包含至少一个大写字母';
+                          return AppLocalizations.of(context)!
+                              .valiPassAtLeast1U;
+                        } else if (!value.contains(RegExp(r'[a-z]'))) {
+                          // return '密码必须包含至少一个小写字母';
+                          return AppLocalizations.of(context)!
+                              .valiPassAtLeast1L;
+                        } else if (value.contains(RegExp(r'\s'))) {
+                          // return '密码不能包含空格';
+                          return AppLocalizations.of(context)!
+                              .valiPassNoSpaceAllow;
+                        }
+                        return null;
+                      },
+                      onChanged: (value) {},
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextFieldComponent(
+                      isPassword: true,
+                      controller: confirmPasswordController,
+                      validator: (value) {
+                        if (value == null || value.trim().isEmpty) {
+                          return AppLocalizations.of(context)!.valiPassNoEmpty;
+                        } else if (confirmPasswordController.text !=
+                            passwordController.text) {
+                          return AppLocalizations.of(context)!.valiPassNoMatch;
+                        }
+                        return null;
+                      },
+                      onChanged: (value) {},
+                    ),
+                    TextFieldComponent(
+                      isPassword: false,
+                      controller: usernameController,
+                      hintText: AppLocalizations.of(context)!.usernameHint,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          //用户名不能为空
+                          return AppLocalizations.of(context)!
+                              .valiUsernameNoEmpty;
+                        } else if (value.length < 3) {
+                          //用户名至少需要3个字符
+                          return AppLocalizations.of(context)!
+                              .valiUsernameAtLeast3;
+                        } else if (value.contains(RegExp(r'\s'))) {
+                          //用户不能包含空格
+                          return AppLocalizations.of(context)!
+                              .valiUsernameNoSpaceAllow;
+                        }
+                        return null;
+                      },
+                      onChanged: (value) {},
+                    ),
+                    SubmitButtonComponent(
+                      buttonText: "确认",
+                      buttonTextStyle: tSubmitButtonText,
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          _formKey.currentState!.save();
+                        }
+                      },
+                    ),
+                  ],
+                )),
+            SizedBox(height: 50),
           ],
         ),
       ),

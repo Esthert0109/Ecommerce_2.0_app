@@ -43,3 +43,6 @@ const kSecondaryButtonTextColor = Color(0xFF5F7B59);
 const kSecondaryButtonTextColor2 = Color(0xFFF49B33);
 const kSecondaryButtonTextColor3 = Color(0XFFDA4827);
 const kSecondaryDisableButtonTextColor = Color(0XFF999999);
+
+//Input Field Color
+const kInputFormFieldColor1 = Color(0xFFF5F5F5);

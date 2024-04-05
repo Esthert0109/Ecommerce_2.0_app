@@ -86,3 +86,10 @@ const tTagUnselectionSelectedText = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: kMainBlackColor);
+
+// Input
+const tInputFieldText = TextStyle(
+    fontFamily: 'Noto Sans SC',
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: kSecondaryDisableButtonTextColor);
