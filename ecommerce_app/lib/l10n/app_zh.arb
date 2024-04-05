@@ -16,5 +16,9 @@
     "valiPassAtLeast8":"密码至少需要8个字符",
     "valiPassAtLeast1U":"密码必须包含至少一个大写字母",
     "valiPassAtLeast1L":"密码必须包含至少一个小写字母",
-    "valiPassNoMatch":"密码与确认密码不匹配"
+    "valiPassNoMatch":"密码与确认密码不匹配",
+
+    "statusSuccessful":"成功",
+    "statusRegisSuccessful":"账号注册成功.",
+    "statusPassResetSuccessful":"密码已成功修改."
 }
