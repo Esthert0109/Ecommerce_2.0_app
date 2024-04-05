@@ -5,10 +5,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
+import '../../Components/Common/Loading/addressLoadingComponent.dart';
 import '../../Components/Common/Loading/explorePostDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/explorePostLoadingComponent.dart';
 import '../../Components/Common/Loading/inventoryDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/inventoryLoading.dart';
+import '../../Components/Common/Loading/orderLoadingComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Constants/colorConstants.dart';
@@ -482,6 +484,18 @@ class _ExamplesPageState extends State<ExamplesPage> {
             InventoryDetailLoadingComponent(),
             const SizedBox(
               height: 100,
+            ),
+            Text("Order Loading Examples: "),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: List.generate(3, (index) => OrderLoadingComponent()),
+            ),
+            Text("Address Loading Examples: "),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: List.generate(3, (index) => AddressLoadingComponent()),
             ),
             SizedBox(height: 50),
           ],
