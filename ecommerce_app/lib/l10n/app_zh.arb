@@ -3,5 +3,18 @@
     "mall": "商城",
     "perk": "福利",
     "cart": "购物车",
-    "mine": "我的"
+    "mine": "我的",
+    "passwordhint": "请输入密码",
+    "usernameHint": "请输入用户名称",
+
+    "valiUsernameNoEmpty":"用户名不能为空",
+    "valiUsernameAtLeast3":"用户名至少需要3个字符",
+    "valiUsernameNoSpaceAllow":"用户不能包含空格",
+
+    "valiPassNoEmpty":"密码不能为空",
+    "valiPassNoSpaceAllow":"密码不能包含空格",
+    "valiPassAtLeast8":"密码至少需要8个字符",
+    "valiPassAtLeast1U":"密码必须包含至少一个大写字母",
+    "valiPassAtLeast1L":"密码必须包含至少一个小写字母",
+    "valiPassNoMatch":"密码与确认密码不匹配"
 }

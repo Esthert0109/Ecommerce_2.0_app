@@ -3,5 +3,19 @@
     "mall": "Mall",
     "perk": "Perk",
     "cart": "Cart",
-    "mine": "Mine"
+    "mine": "Mine",
+    "usernameHint": "Enter Username",
+    "passwordhint": "Enter Password",
+
+    "valiUsernameNoEmpty": "Username cannot be empty",
+    "valiUsernameAtLeast3": "Username must be at least 3 characters long",
+    "valiUsernameNoSpaceAllow": "Username cannot contain spaces",
+
+    "valiPassNoEmpty": "Password cannot be empty",
+    "valiPassNoSpaceAllow": "Password cannot contain spaces",
+    "valiPassAtLeast8": "Password must be at least 8 characters long",
+    "valiPassAtLeast1U": "Password must contain at least one uppercase letter",
+    "valiPassAtLeast1L": "Password must contain at least one lowercase letter",
+    "valiPassNoMatch": "Password and confirm password do not match"
+    
 }

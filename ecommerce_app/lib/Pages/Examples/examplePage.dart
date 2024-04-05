@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
@@ -8,6 +9,7 @@ import '../../Components/Common/Loading/explorePostDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/explorePostLoadingComponent.dart';
 import '../../Components/Common/Loading/inventoryLoading.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
+import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
@@ -19,6 +21,11 @@ class ExamplesPage extends StatefulWidget {
 class _ExamplesPageState extends State<ExamplesPage> {
   int titleSelection = 0;
   bool _isLoading = false;
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -333,6 +340,39 @@ class _ExamplesPageState extends State<ExamplesPage> {
               ),
             ),
             Divider(),
+            Text("Input Field: "),
+            Form(
+                key: _formKey,
+                child: Column(
+                  children: <Widget>[
+                    TextFieldComponent(
+                      isPassword: true,
+                      controller: passwordController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          // return '密码不能为空';
+                          return AppLocalizations.of(context)!.valiPassNoEmpty;
+                        } else if (value.length < 8) {
+                          // return '密码至少需要8个字符';
+                          return AppLocalizations.of(context)!.valiPassAtLeast8;
+                        } else if (!value.contains(RegExp(r'[A-Z]'))) {
+                          // return '密码必须包含至少一个大写字母';
+                          return AppLocalizations.of(context)!
+                              .valiPassAtLeast1U;
+                        } else if (!value.contains(RegExp(r'[a-z]'))) {
+                          // return '密码必须包含至少一个小写字母';
+                          return AppLocalizations.of(context)!
+                              .valiPassAtLeast1L;
+                        } else if (value.contains(RegExp(r'\s'))) {
+                          // return '密码不能包含空格';
+                          return AppLocalizations.of(context)!
+                              .valiPassNoSpaceAllow;
+                        }
+                        return null;
+                      },
+                      onChanged: (value) {},
+                    ),
+            Divider(),
             Text("Loading Examples: "),
             Container(
               height: 100,
@@ -371,7 +411,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
               height: 100,
             ),
             Text("Inventory Loading Examples: "),
-            SizedBox(
+                    SizedBox(
               height: 500,
               child: GridView.builder(
                 physics: NeverScrollableScrollPhysics(),
@@ -387,8 +427,56 @@ class _ExamplesPageState extends State<ExamplesPage> {
               ),
             ),
             const SizedBox(
-              height: 50,
-            )
+                      height: 10,
+                    ),
+                    TextFieldComponent(
+                      isPassword: true,
+                      controller: confirmPasswordController,
+                      validator: (value) {
+                        if (value == null || value.trim().isEmpty) {
+                          return AppLocalizations.of(context)!.valiPassNoEmpty;
+                        } else if (confirmPasswordController.text !=
+                            passwordController.text) {
+                          return AppLocalizations.of(context)!.valiPassNoMatch;
+                        }
+                        return null;
+                      },
+                      onChanged: (value) {},
+                    ),
+                    TextFieldComponent(
+                      isPassword: false,
+                      controller: usernameController,
+                      hintText: AppLocalizations.of(context)!.usernameHint,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          //用户名不能为空
+                          return AppLocalizations.of(context)!
+                              .valiUsernameNoEmpty;
+                        } else if (value.length < 3) {
+                          //用户名至少需要3个字符
+                          return AppLocalizations.of(context)!
+                              .valiUsernameAtLeast3;
+                        } else if (value.contains(RegExp(r'\s'))) {
+                          //用户不能包含空格
+                          return AppLocalizations.of(context)!
+                              .valiUsernameNoSpaceAllow;
+                        }
+                        return null;
+                      },
+                      onChanged: (value) {},
+                    ),
+                    SubmitButtonComponent(
+                      buttonText: "确认",
+                      buttonTextStyle: tSubmitButtonText,
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          _formKey.currentState!.save();
+                        }
+                      },
+                    ),
+                  ],
+                )),
+            SizedBox(height: 50),
           ],
         ),
       ),
