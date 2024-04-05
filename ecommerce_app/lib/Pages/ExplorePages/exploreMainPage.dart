@@ -53,53 +53,6 @@ class _ExploreMainPageState extends State<ExploreMainPage> {
                               transition: Transition.rightToLeftWithFade);
                         },
                       )),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: List.generate(
-                          4,
-                          (index) => GestureDetector(
-                                onTapDown: (details) {
-                                  setState(() {
-                                    buttonColor = kTagSelectionPressedColor;
-                                  });
-                                },
-                                onTapUp: (details) {
-                                  setState(() {
-                                    buttonColor = kSecondaryButtonColor6;
-                                  });
-                                },
-                                onTapCancel: () {
-                                  setState(() {
-                                    buttonColor = kSecondaryButtonColor6;
-                                  });
-                                },
-                                child: AnimatedContainer(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 8, vertical: 2),
-                                  margin: EdgeInsets.only(right: 10),
-                                  duration: Duration(milliseconds: 150),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(13),
-                                      color: buttonColor,
-                                      border: Border.all(
-                                          width: 1.6,
-                                          color: kTagUnselectedColor)),
-                                  child: Text(
-                                    "全部",
-                                    style: tTagSelectionSelectedText,
-                                  ),
-                                ),
-                              )),
-                    ),
-                  ),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.start,
-                  //   crossAxisAlignment: CrossAxisAlignment.center,
-                  //   children: List.generate(2, (index) => null),
-                  // )
                 ]),
           ),
         ),
