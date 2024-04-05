@@ -1,7 +1,6 @@
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
@@ -16,6 +15,7 @@ class ExamplesPage extends StatefulWidget {
 
 class _ExamplesPageState extends State<ExamplesPage> {
   int titleSelection = 0;
+  bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,22 +33,41 @@ class _ExamplesPageState extends State<ExamplesPage> {
               buttonText: "确认",
               buttonTextStyle: tSubmitButtonText,
               onPressed: () {},
+              isLoading: false,
             ),
             SubmitButtonComponent(
               buttonText: "返回登陆",
               buttonTextStyle: tSubmitButtonText,
               onPressed: () {},
+              isLoading: false,
             ),
             SubmitButtonComponent(
               buttonText: "保存",
               buttonTextStyle: tSubmitButtonText,
               onPressed: () {},
+              isLoading: false,
             ),
             Text("Disable Submit Button: "),
             SubmitButtonComponent(
               buttonText: "确认",
               buttonTextStyle: tSubmitButtonText,
-              onPressed: null,
+              isLoading: false,
+            ),
+            Text("Submit Button Loading: "),
+            SubmitButtonComponent(
+              buttonText: "确认",
+              buttonTextStyle: tSubmitButtonText,
+              isLoading: true,
+            ),
+            SubmitButtonComponent(
+              buttonText: "点击一下",
+              buttonTextStyle: tSubmitButtonText,
+              isLoading: _isLoading,
+              onPressed: () {
+                setState(() {
+                  _isLoading = !_isLoading;
+                });
+              },
             ),
             Divider(),
             Text("Primary Button: "),
@@ -308,6 +327,23 @@ class _ExamplesPageState extends State<ExamplesPage> {
                     titleSelection = index;
                   });
                 },
+              ),
+            ),
+            Divider(),
+            Text("Loading Examples: "),
+            Container(
+              height: 100,
+              color: kMainGreenColor,
+              child: Center(
+                child: LoadingAnimationWidget.prograssiveDots(
+                    color: kMainWhiteColor, size: 50),
+              ),
+            ),
+            SizedBox(
+              height: 100,
+              child: Center(
+                child: LoadingAnimationWidget.prograssiveDots(
+                    color: kMainGreenColor, size: 50),
               ),
             ),
             SizedBox(
