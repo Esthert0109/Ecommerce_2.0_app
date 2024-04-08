@@ -14,6 +14,7 @@ import '../../Components/Common/Loading/orderLoadingComponent.dart';
 import '../../Components/Common/Loading/orderStatusDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/pointLoadingComponent.dart';
 import '../../Components/Common/Loading/pointRuleLoadingComponent.dart';
+import '../../Components/Common/Selection/orderStatusSelectionComponent.dart';
 import '../../Components/Common/Selection/tagSelectionComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
@@ -550,6 +551,8 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 });
               },
             ),
+            Text("Order Status Selection Examples: "),
+            OrderStatusSelectionComponent(),
             SizedBox(height: 50),
           ],
         ),

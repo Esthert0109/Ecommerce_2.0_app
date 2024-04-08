@@ -9,6 +9,7 @@ const kBackgroundGradientEnd = Color(0xffF9F9F9);
 const kAppbarBackgroundColor = Colors.transparent;
 const kMainLoadingColor = Color.fromARGB(255, 217, 226, 215);
 const kSecondaryLoadingColor = Color.fromARGB(255, 243, 245, 242);
+const kBorderColor = Color(0xffF4F4F4);
 
 // Button Color
 const kSubmitButtonColor = Color(0XFF689060);
@@ -51,3 +52,6 @@ const kSecondaryDisableButtonTextColor = Color(0XFF999999);
 
 //Input Field Color
 const kInputFormFieldColor1 = Color(0xFFF5F5F5);
+
+// Badge Color
+const kBadgeColor = Color(0xffDA4827);
