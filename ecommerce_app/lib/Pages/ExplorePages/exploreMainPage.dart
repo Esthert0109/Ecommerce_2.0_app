@@ -14,6 +14,8 @@ import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 import 'package:badges/badges.dart' as badges;
 
+import '../Examples/pageSlidingExample.dart';
+
 class ExploreMainPage extends StatefulWidget {
   const ExploreMainPage({super.key});
 
@@ -54,15 +56,68 @@ class _ExploreMainPageState extends State<ExploreMainPage> {
                         buttonText: "Example Page",
                         buttonTextStyle: tSubmitButtonText,
                         onPressed: () {
-                          Get.to(() => ExamplesPage(),
-                              transition: Transition.rightToLeftWithFade);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (
+                                context,
+                              ) =>
+                                  ExamplesPage(),
+                            ),
+                          );
                         },
                         isLoading: false,
                       )),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    width: 300,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    child: SubmitButtonComponent(
+                      buttonText: "Navigation Testing",
+                      buttonTextStyle: tSubmitButtonText,
+                      onPressed: () {
+                        Navigator.of(context).push(_createRoute());
+                      },
+                      isLoading: false,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    width: 300,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    child: SubmitButtonComponent(
+                      buttonText: "Navigation Testing",
+                      buttonTextStyle: tSubmitButtonText,
+                      onPressed: () {
+                        Get.to(() => SlidePageExample(),
+                            transition: Transition.rightToLeft,
+                            duration: Duration(milliseconds: 300));
+                      },
+                      isLoading: false,
+                    ),
+                  )
                 ]),
           ),
         ),
       ),
     );
   }
+}
+
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ExamplesPage(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(1.0, 0.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }
