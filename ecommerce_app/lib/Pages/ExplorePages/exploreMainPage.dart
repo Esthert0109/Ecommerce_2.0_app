@@ -25,7 +25,7 @@ class ExploreMainPage extends StatefulWidget {
 
 class _ExploreMainPageState extends State<ExploreMainPage> {
   bool isDisable = true;
-  Color? buttonColor;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -76,48 +76,19 @@ class _ExploreMainPageState extends State<ExploreMainPage> {
                       buttonText: "Navigation Testing",
                       buttonTextStyle: tSubmitButtonText,
                       onPressed: () {
-                        Navigator.of(context).push(_createRoute());
-                      },
-                      isLoading: false,
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    width: 300,
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    child: SubmitButtonComponent(
-                      buttonText: "Navigation Testing",
-                      buttonTextStyle: tSubmitButtonText,
-                      onPressed: () {
                         Get.to(() => SlidePageExample(),
                             transition: Transition.rightToLeft,
                             duration: Duration(milliseconds: 300));
                       },
                       isLoading: false,
                     ),
-                  )
+                  ),
+                  
+                  
                 ]),
           ),
         ),
       ),
     );
   }
-}
-
-Route _createRoute() {
-  return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => ExamplesPage(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      const begin = Offset(1.0, 0.0);
-      const end = Offset.zero;
-      const curve = Curves.easeInOut;
-
-      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-
-      return SlideTransition(
-        position: animation.drive(tween),
-        child: child,
-      );
-    },
-  );
 }

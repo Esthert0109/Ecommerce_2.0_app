@@ -32,6 +32,11 @@ const kSecondaryButtonColor6 = Colors.transparent;
 
 const kSecondaryButtonPressedColor = Color.fromARGB(255, 178, 184, 176);
 
+const kPointCardButtonPrimaryColor = Color(0xCC7DB772);
+const kPointCardButtonSecondaryColor = Color(0xCC689060);
+const kPointCardButtonPrimaryPressedColor = Color(0xff7DB772);
+const kPointCardButtonSecondaryPressedColor = Color(0xff689060);
+
 // Selection Button Color
 const kTagSelectedColor = Color(0XFF333333);
 const kTagUnselectedColor = Color(0xffDDDDDD);
@@ -49,6 +54,8 @@ const kSecondaryButtonTextColor = Color(0xFF5F7B59);
 const kSecondaryButtonTextColor2 = Color(0xFFF49B33);
 const kSecondaryButtonTextColor3 = Color(0XFFDA4827);
 const kSecondaryDisableButtonTextColor = Color(0XFF999999);
+
+const kPerkButtonTextColor = Color.fromRGBO(255, 255, 255, 1);
 
 //Input Field Color
 const kInputFormFieldColor1 = Color(0xFFF5F5F5);

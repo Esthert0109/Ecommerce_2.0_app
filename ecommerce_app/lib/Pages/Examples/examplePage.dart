@@ -19,6 +19,7 @@ import '../../Components/Common/Selection/tagSelectionComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
+import '../../Components/Perk/pointCardComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
@@ -553,6 +554,24 @@ class _ExamplesPageState extends State<ExamplesPage> {
             ),
             Text("Order Status Selection Examples: "),
             OrderStatusSelectionComponent(),
+            Text("Point Card Examples: "),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(3),
+                  child: PointCardComponent(
+                    isShareCard: false,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(3),
+                  child: PointCardComponent(
+                    point: "603",
+                    isShareCard: true,
+                  ),
+                ),
+              ],
+            ),
             SizedBox(height: 50),
           ],
         ),

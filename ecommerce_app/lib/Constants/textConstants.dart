@@ -47,6 +47,11 @@ const tSecondaryButtonText7 = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
     color: kSecondaryButtonTextColor3);
+const tPerkButtonText = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: kPerkButtonTextColor,
+    height: 1.5);
 
 // Selection
 const tTagSelectionSelectedText = TextStyle(
@@ -76,3 +81,15 @@ const tBadgesText = TextStyle(
     fontWeight: FontWeight.w400,
     color: kMainWhiteColor,
     height: 1.2);
+
+// Perk
+const tPerkCardText1 = TextStyle(
+  fontSize: 24,
+  fontWeight: FontWeight.w500,
+  color: kMainBlackColor,
+);
+const tPerkCardText2 = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: kMainBlackColor,
+);
