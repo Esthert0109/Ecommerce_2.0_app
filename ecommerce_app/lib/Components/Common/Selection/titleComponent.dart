@@ -9,8 +9,8 @@ class TitleComponent extends StatefulWidget {
   final Function(int) onTap;
   final bool isCart;
 
-  TitleComponent(
-      {required this.titles,
+  const TitleComponent(
+      {super.key, required this.titles,
       required this.selectedIndex,
       required this.onTap,
       required this.isCart});

@@ -14,6 +14,7 @@ import '../../Components/Common/Loading/orderLoadingComponent.dart';
 import '../../Components/Common/Loading/orderStatusDetailLoadingComponent.dart';
 import '../../Components/Common/Loading/pointLoadingComponent.dart';
 import '../../Components/Common/Loading/pointRuleLoadingComponent.dart';
+import '../../Components/Common/Selection/tagSelectionComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
@@ -33,6 +34,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
   final TextEditingController confirmPasswordController =
       TextEditingController();
   final TextEditingController usernameController = TextEditingController();
+  int tagSelection = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -537,6 +539,16 @@ class _ExamplesPageState extends State<ExamplesPage> {
             Column(
               children:
                   List.generate(3, (index) => PointRuleLoadingComponent()),
+            ),
+            Text("Tag Selection Examples: "),
+            TagSelectionComponent(
+              tags: ["全部", "价钱", "热度"],
+              selectedIndex: tagSelection,
+              onTap: (index) {
+                setState(() {
+                  tagSelection = index;
+                });
+              },
             ),
             SizedBox(height: 50),
           ],
