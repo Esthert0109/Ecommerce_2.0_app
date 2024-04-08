@@ -93,3 +93,21 @@ const tPerkCardText2 = TextStyle(
   fontWeight: FontWeight.w500,
   color: kMainBlackColor,
 );
+
+// Post Inventory
+const tPostInventoryTitleText = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: kMainBlackColor,
+);
+const tPostInventoryPriceText1 = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w400,
+  color: kMainBlackColor,
+);
+const tPostInventoryPriceText2 = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  color: kMainBlackColor,
+);
+

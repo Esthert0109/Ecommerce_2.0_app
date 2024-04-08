@@ -20,6 +20,7 @@ import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
 import '../../Components/Perk/pointCardComponent.dart';
+import '../../Components/Post/postInventoryComponent.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
@@ -571,6 +572,13 @@ class _ExamplesPageState extends State<ExamplesPage> {
                   ),
                 ),
               ],
+            ),
+            Text("Post Inventory Examples: "),
+            PostInventoryComponent(
+              inventoryImg:
+                  "https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg",
+              inventoryTitle: '茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶',
+              inventoryPrice: '30.80',
             ),
             SizedBox(height: 50),
           ],
