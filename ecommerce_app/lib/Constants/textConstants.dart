@@ -112,3 +112,33 @@ const tPostInventoryPriceText2 = TextStyle(
   fontWeight: FontWeight.w500,
   color: kMainBlackColor,
 );
+const tPostInventoryPriceText3 = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: kMainOrangeColor,
+);
+const tPostInventoryPriceText4 = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  color: kMainOrangeColor,
+);
+const tInventorySoldText = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  color: kMainGreyColor,
+);
+const tDiscountText1 = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: kMainGreyColor,
+  decoration: TextDecoration.lineThrough,
+  decorationColor: kMainOrangeColor,
+  decorationThickness: 3.2,
+);
+const tDiscountText2 = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: kMainGreyColor,
+    decoration: TextDecoration.lineThrough,
+    decorationColor: kMainOrangeColor,
+    decorationThickness: 3.2);

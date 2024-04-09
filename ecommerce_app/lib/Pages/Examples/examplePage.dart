@@ -20,6 +20,7 @@ import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
 import '../../Components/Inventory/InventorySelectionComponent2.dart';
+import '../../Components/Inventory/inventoryComponent.dart';
 import '../../Components/Perk/pointCardComponent.dart';
 import '../../Components/Post/postInventoryComponent.dart';
 import '../../Constants/colorConstants.dart';
@@ -591,6 +592,119 @@ class _ExamplesPageState extends State<ExamplesPage> {
                   inventorySelection = index;
                 });
               },
+            ),
+            Text("Inventory Examples: "),
+            Text("Inventory Examples:  - normal inventory"),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return InventoryComponent(
+                    isPerk: false,
+                    isDiscount: false,
+                    isCategory: false,
+                    inventoryPoint: "526",
+                    inventoryPrice: "50.54",
+                    inventoryDiscountPrice: "40.63",
+                    inventorySold: "521",
+                    inventoryImg:
+                        'https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg',
+                    inventoryTitle:
+                        'blablablablablablablablablablablablablablabla',
+                  );
+                },
+              ),
+            ),
+            Text("Inventory Examples:  - category"),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return InventoryComponent(
+                    isPerk: false,
+                    isDiscount: false,
+                    isCategory: true,
+                    inventoryPoint: "526",
+                    inventoryPrice: "50.54",
+                    inventoryDiscountPrice: "40.63",
+                    inventorySold: "521",
+                    inventoryImg:
+                        'https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg',
+                    inventoryTitle:
+                        'blablablablablablablablablablablablablablabla',
+                  );
+                },
+              ),
+            ),
+            Text("Inventory Examples:  - perk page (perk)"),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return InventoryComponent(
+                    isPerk: true,
+                    isDiscount: false,
+                    isCategory: false,
+                    inventoryPoint: "526",
+                    inventoryPrice: "50.54",
+                    inventoryDiscountPrice: "40.63",
+                    inventorySold: "521",
+                    inventoryImg:
+                        'https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg',
+                    inventoryTitle:
+                        'blablablablablablablablablablablablablablabla',
+                  );
+                },
+              ),
+            ),
+            Text("Inventory Examples:  - perk page (discount)"),
+            SizedBox(
+              height: 500,
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.7),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return InventoryComponent(
+                    isPerk: false,
+                    isDiscount: true,
+                    isCategory: false,
+                    inventoryPoint: "526",
+                    inventoryPrice: "50.54",
+                    inventoryDiscountPrice: "40.63",
+                    inventorySold: "521",
+                    inventoryImg:
+                        'https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg',
+                    inventoryTitle:
+                        'blablablablablablablablablablablablablablabla',
+                  );
+                },
+              ),
             ),
             SizedBox(height: 50),
           ],
