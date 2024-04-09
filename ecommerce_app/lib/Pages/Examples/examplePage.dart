@@ -1,9 +1,10 @@
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
 import 'package:ecommerce_app/Components/Common/SearchBar/searchbarComponent.dart';
+import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:get/get.dart';
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
 import '../../Components/Common/Loading/addressLoadingComponent.dart';
@@ -617,6 +618,40 @@ class _ExamplesPageState extends State<ExamplesPage> {
 
                 if (trimmedValue.isNotEmpty) {}
               },
+            ),
+            SizedBox(height: 20),
+            Divider(),
+            Text("Payment Status:"),
+            SizedBox(height: 10),
+            SubmitButtonComponent(
+              buttonText: "付款成功",
+              buttonTextStyle: tSubmitButtonText,
+              onPressed: () {
+                Get.to(
+                    () => PaymentStatusComponent(
+                          title: AppLocalizations.of(context)!
+                              .statusPaymentSuccessful,
+                          image: "assets/status/paymentComplete.png",
+                          paymentSuccess: true,
+                        ),
+                    transition: Transition.rightToLeft,
+                    duration: Duration(milliseconds: 300));
+              },
+              isLoading: false,
+            ),
+            SubmitButtonComponent(
+              buttonText: "付款失败",
+              buttonTextStyle: tSubmitButtonText,
+              onPressed: () {
+                Get.to(
+                    () => PaymentStatusComponent(
+                        title: AppLocalizations.of(context)!.statusPaymentFail,
+                        image: "assets/status/paymentFail.png",
+                        paymentSuccess: false),
+                    transition: Transition.rightToLeft,
+                    duration: Duration(milliseconds: 300));
+              },
+              isLoading: false,
             ),
             SizedBox(height: 20),
             Divider(),

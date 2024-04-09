@@ -21,6 +21,8 @@
 
     "statusSuccessful":"Successful",
     "statusRegisSuccessful":"Register Successful.",
-    "statusPassResetSuccessful":"Password Reset Successful."
+    "statusPassResetSuccessful":"Password Reset Successful.",
+    "statusPaymentSuccessful":"Payment Successful.",
+    "statusPaymentFail":"Payment Fail"
     
 }

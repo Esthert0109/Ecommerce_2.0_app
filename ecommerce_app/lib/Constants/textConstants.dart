@@ -76,6 +76,10 @@ const tStatusFieldText = TextStyle(
     fontSize: 30, fontWeight: FontWeight.w700, color: kMainBlackColor);
 const tOrderStatusSelectionText = TextStyle(
     fontSize: 12, fontWeight: FontWeight.w400, color: kMainBlackColor);
+const tStatusFieldText2 = TextStyle(
+    fontSize: 18, fontWeight: FontWeight.w700, color: kMainBlackColor);
+const tStatusFieldText3 = TextStyle(
+    fontSize: 18, fontWeight: FontWeight.w400, color: kMainBlackColor);
 
 // Badge
 const tBadgesText = TextStyle(
