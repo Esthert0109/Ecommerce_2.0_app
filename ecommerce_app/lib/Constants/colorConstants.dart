@@ -37,6 +37,9 @@ const kPointCardButtonSecondaryColor = Color(0xCC689060);
 const kPointCardButtonPrimaryPressedColor = Color(0xff7DB772);
 const kPointCardButtonSecondaryPressedColor = Color(0xff689060);
 
+const kInventorySelectionColor = Color(0xffF8F8F8);
+const kInventorySelectionPressedColor = Color.fromARGB(255, 243, 243, 243);
+
 // Selection Button Color
 const kTagSelectedColor = Color(0XFF333333);
 const kTagUnselectedColor = Color(0xffDDDDDD);

@@ -58,6 +58,8 @@ const tTagSelectionSelectedText = TextStyle(
     fontSize: 14, fontWeight: FontWeight.w500, color: kMainBlackColor);
 const tTagUnselectionSelectedText = TextStyle(
     fontSize: 14, fontWeight: FontWeight.w400, color: kMainBlackColor);
+const tInventorySelectionTitleText = TextStyle(
+    fontSize: 12, fontWeight: FontWeight.w400, color: kMainBlackColor);
 
 // Title
 const tTitleSelectedText = TextStyle(
@@ -110,4 +112,3 @@ const tPostInventoryPriceText2 = TextStyle(
   fontWeight: FontWeight.w500,
   color: kMainBlackColor,
 );
-

@@ -19,6 +19,7 @@ import '../../Components/Common/Selection/tagSelectionComponent.dart';
 import '../../Components/Common/Selection/titleComponent.dart';
 import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
+import '../../Components/Inventory/InventorySelectionComponent2.dart';
 import '../../Components/Perk/pointCardComponent.dart';
 import '../../Components/Post/postInventoryComponent.dart';
 import '../../Constants/colorConstants.dart';
@@ -38,6 +39,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
       TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   int tagSelection = 0;
+  int inventorySelection = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -579,6 +581,16 @@ class _ExamplesPageState extends State<ExamplesPage> {
                   "https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg",
               inventoryTitle: '茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶',
               inventoryPrice: '30.80',
+            ),
+            Text("Inventory Selection Examples: "),
+            InventorySelectionComponent2(
+              selections: ["60 PCS", "90 PCS", "20 PCS"],
+              selectedIndex: inventorySelection,
+              onTap: (index) {
+                setState(() {
+                  inventorySelection = index;
+                });
+              },
             ),
             SizedBox(height: 50),
           ],
