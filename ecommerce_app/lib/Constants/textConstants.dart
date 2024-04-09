@@ -142,3 +142,30 @@ const tDiscountText2 = TextStyle(
     decoration: TextDecoration.lineThrough,
     decorationColor: kMainOrangeColor,
     decorationThickness: 3.2);
+
+// Address
+const tAddressNameText = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: kMainBlackColor,
+);
+const tAddressPhoneText = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: kMainGreyColor,
+);
+const tFullAddressText = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  color: kMainBlackColor,
+);
+const tCreateAddressText = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+  color: kMainBlackColor,
+);
+const tOrderStatusAddressNameText = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: kMainGreyColor,
+);

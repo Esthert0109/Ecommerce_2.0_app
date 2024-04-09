@@ -25,6 +25,7 @@ class ExploreMainPage extends StatefulWidget {
 
 class _ExploreMainPageState extends State<ExploreMainPage> {
   bool isDisable = true;
+  Color textColor = kSubmitButtonColor;
 
   @override
   Widget build(BuildContext context) {

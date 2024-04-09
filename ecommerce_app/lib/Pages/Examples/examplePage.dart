@@ -1,8 +1,10 @@
+import 'package:ecommerce_app/Components/Address/addressSecondaryComponent.dart';
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../Components/Address/addressComponent.dart';
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
 import '../../Components/Common/Loading/addressLoadingComponent.dart';
@@ -706,6 +708,22 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 },
               ),
             ),
+            Text("Address Example: with info"),
+            AddressComponent(
+              isCreate: false,
+              name: "Kelvinnnn",
+              phone: "0166683519",
+              fullAddress: "XXXXXXXX,Wp Kuala Lumpur,Kuala Lumpur,50050",
+            ),
+            Text("Address Example: create address"),
+            AddressComponent(
+              isCreate: true,
+            ),
+            Text("Address Secondary Example: "),
+            AddressSecondaryComponent(
+                fullAddress: "XXXXXXXX,Wp Kuala Lumpur,Kuala Lumpur,50050",
+                name: "Kelvin",
+                phone: "0166683519"),
             SizedBox(height: 50),
           ],
         ),
