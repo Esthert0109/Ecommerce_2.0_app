@@ -46,6 +46,7 @@ const kTagUnselectedColor = Color(0xffDDDDDD);
 const kTagSelectionPressedColor = Color.fromARGB(255, 238, 238, 238);
 const kTitleSelectedColor = Color(0xff95CE8A);
 const kTitleUnselectedColor = Colors.transparent;
+const kCategoryUnselectedColor = Color(0XFF666666);
 
 // Text Color
 const kBottomNaviBarTextColor = Color(0XFF689060);

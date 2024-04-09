@@ -1,5 +1,7 @@
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
 import 'package:ecommerce_app/Components/Common/SearchBar/searchbarComponent.dart';
+import 'package:ecommerce_app/Components/Common/Selection/categorySelectionComponent.dart';
+import 'package:ecommerce_app/Components/Common/Selection/statusSelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -41,6 +43,8 @@ class _ExamplesPageState extends State<ExamplesPage> {
       TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   int tagSelection = 0;
+  int categroySelection = 0;
+  int statusSelection = 0;
   int inventorySelection = 0;
 
   @override
@@ -652,6 +656,37 @@ class _ExamplesPageState extends State<ExamplesPage> {
                     duration: Duration(milliseconds: 300));
               },
               isLoading: false,
+            ),
+            SizedBox(height: 20),
+            Divider(),
+            Text("Category Selection Example:"),
+            SizedBox(height: 10),
+            CategorySelectionComponent(
+              tags: ["全部", "茶具", "茶叶", "古玩"],
+              selectedIndex: categroySelection,
+              onTap: (index) {
+                setState(() {
+                  categroySelection = index;
+                });
+              },
+            ),
+            SizedBox(height: 20),
+            Divider(),
+            Text("Status Selection Example:"),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                StatusSelectionComponent(
+                  tags: ["全部", "待发货", "待收货", "已完成"],
+                  selectedIndex: statusSelection,
+                  onTap: (index) {
+                    setState(() {
+                      statusSelection = index;
+                    });
+                  },
+                  isCart: false,
+                ),
+              ],
             ),
             SizedBox(height: 20),
             Divider(),
