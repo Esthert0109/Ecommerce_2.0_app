@@ -6,6 +6,7 @@
     "mine": "我的",
     "passwordhint": "请输入密码",
     "usernameHint": "请输入用户名称",
+    "searchHint": "搜索关键词。。。",
 
     "valiUsernameNoEmpty":"用户名不能为空",
     "valiUsernameAtLeast3":"用户名至少需要3个字符",
