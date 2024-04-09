@@ -3,6 +3,7 @@ import 'package:ecommerce_app/Components/Common/SearchBar/searchbarComponent.dar
 import 'package:ecommerce_app/Components/Common/Selection/categorySelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Selection/statusSelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
+import 'package:ecommerce_app/Components/Inventory/InventoryTitleComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -689,6 +690,14 @@ class _ExamplesPageState extends State<ExamplesPage> {
               ],
             ),
             SizedBox(height: 20),
+            Divider(),
+            Text("Inventory Title Example:"),
+            SizedBox(height: 10),
+            InventoryTitleComponent(
+                productTitle:
+                    "New Tea Alpine Yunwu Green Tea Maojian Tea Strong Flavor Canned Bulk Green Tea",
+                price: "60.45",
+                productSold: "245"),
             Divider(),
             SizedBox(height: 50),
           ],
