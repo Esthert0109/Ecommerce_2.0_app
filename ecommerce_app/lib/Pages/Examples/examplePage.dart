@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
+import 'package:ecommerce_app/Components/Common/SearchBar/searchbarComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -592,6 +593,33 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 });
               },
             ),
+            Divider(),
+            Text("Mall SeachBar: "),
+            SizedBox(height: 10),
+            SearchBarComponent(
+              onChanged: null,
+              isExpore: false,
+              onFieldSubmitted: (value) {
+                // Trim the submitted value to remove leading and trailing whitespace
+                String trimmedValue = value.trim();
+
+                if (trimmedValue.isNotEmpty) {}
+              },
+            ),
+            SizedBox(height: 10),
+            Text("Product SeachBar: "),
+            SizedBox(height: 10),
+            SearchBarComponent(
+              onChanged: null,
+              isExpore: true,
+              onFieldSubmitted: (value) {
+                String trimmedValue = value.trim();
+
+                if (trimmedValue.isNotEmpty) {}
+              },
+            ),
+            SizedBox(height: 20),
+            Divider(),
             SizedBox(height: 50),
           ],
         ),
