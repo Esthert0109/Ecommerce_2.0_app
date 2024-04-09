@@ -70,13 +70,6 @@ class _SearchBarComponentState extends State<SearchBarComponent> {
                         onPressed: () {
                           if (search != null && search.isNotEmpty) {
                             print(search);
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    SearchResultPage(searchQuery: search),
-                              ),
-                            );
                           }
                         },
                       ),
@@ -129,15 +122,7 @@ class _SearchBarComponentState extends State<SearchBarComponent> {
                               color: Colors.white,
                               icon: const Icon(Icons.search),
                               onPressed: () {
-                                if (search != null && search.isNotEmpty) {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          SearchResultPage(searchQuery: search),
-                                    ),
-                                  );
-                                }
+                                if (search != null && search.isNotEmpty) {}
                               },
                             ),
                           ),
