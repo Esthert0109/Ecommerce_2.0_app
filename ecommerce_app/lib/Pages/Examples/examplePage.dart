@@ -1,9 +1,13 @@
 import 'package:ecommerce_app/Components/Address/addressSecondaryComponent.dart';
 import 'package:ecommerce_app/Components/Common/Button/secondaryButtonComponent.dart';
+import 'package:ecommerce_app/Components/Common/SearchBar/searchbarComponent.dart';
+import 'package:ecommerce_app/Components/Common/Selection/categorySelectionComponent.dart';
+import 'package:ecommerce_app/Components/Common/Selection/statusSelectionComponent.dart';
+import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:get/get.dart';
 import '../../Components/Address/addressComponent.dart';
 import '../../Components/Common/Button/primaryButtonComponent.dart';
 import '../../Components/Common/Button/submitButtonComponent.dart';
@@ -42,6 +46,8 @@ class _ExamplesPageState extends State<ExamplesPage> {
       TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   int tagSelection = 0;
+  int categroySelection = 0;
+  int statusSelection = 0;
   int inventorySelection = 0;
 
   @override
@@ -724,6 +730,98 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 fullAddress: "XXXXXXXX,Wp Kuala Lumpur,Kuala Lumpur,50050",
                 name: "Kelvin",
                 phone: "0166683519"),
+            Divider(),
+            Text("Mall SeachBar: "),
+            SizedBox(height: 10),
+            SearchBarComponent(
+              onChanged: null,
+              isExpore: false,
+              onFieldSubmitted: (value) {
+                // Trim the submitted value to remove leading and trailing whitespace
+                String trimmedValue = value.trim();
+
+                if (trimmedValue.isNotEmpty) {}
+              },
+            ),
+            SizedBox(height: 10),
+            Text("Product SeachBar: "),
+            SizedBox(height: 10),
+            SearchBarComponent(
+              onChanged: null,
+              isExpore: true,
+              onFieldSubmitted: (value) {
+                String trimmedValue = value.trim();
+
+                if (trimmedValue.isNotEmpty) {}
+              },
+            ),
+            SizedBox(height: 20),
+            Divider(),
+            Text("Payment Status:"),
+            SizedBox(height: 10),
+            SubmitButtonComponent(
+              buttonText: "付款成功",
+              buttonTextStyle: tSubmitButtonText,
+              onPressed: () {
+                Get.to(
+                    () => PaymentStatusComponent(
+                          title: AppLocalizations.of(context)!
+                              .statusPaymentSuccessful,
+                          image: "assets/status/paymentComplete.png",
+                          paymentSuccess: true,
+                        ),
+                    transition: Transition.rightToLeft,
+                    duration: Duration(milliseconds: 300));
+              },
+              isLoading: false,
+            ),
+            SubmitButtonComponent(
+              buttonText: "付款失败",
+              buttonTextStyle: tSubmitButtonText,
+              onPressed: () {
+                Get.to(
+                    () => PaymentStatusComponent(
+                        title: AppLocalizations.of(context)!.statusPaymentFail,
+                        image: "assets/status/paymentFail.png",
+                        paymentSuccess: false),
+                    transition: Transition.rightToLeft,
+                    duration: Duration(milliseconds: 300));
+              },
+              isLoading: false,
+            ),
+            SizedBox(height: 20),
+            Divider(),
+            Text("Category Selection Example:"),
+            SizedBox(height: 10),
+            CategorySelectionComponent(
+              tags: ["全部", "茶具", "茶叶", "古玩"],
+              selectedIndex: categroySelection,
+              onTap: (index) {
+                setState(() {
+                  categroySelection = index;
+                });
+              },
+            ),
+            SizedBox(height: 20),
+            Divider(),
+            Text("Status Selection Example:"),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                StatusSelectionComponent(
+                  tags: ["全部", "待发货", "待收货", "已完成"],
+                  selectedIndex: statusSelection,
+                  onTap: (index) {
+                    setState(() {
+                      statusSelection = index;
+                    });
+                  },
+                  isCart: false,
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Divider(),
             SizedBox(height: 50),
           ],
         ),

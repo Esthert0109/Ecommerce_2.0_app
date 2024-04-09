@@ -6,6 +6,7 @@
     "mine": "我的",
     "passwordhint": "请输入密码",
     "usernameHint": "请输入用户名称",
+    "searchHint": "搜索关键词。。。",
 
     "valiUsernameNoEmpty":"用户名不能为空",
     "valiUsernameAtLeast3":"用户名至少需要3个字符",
@@ -20,5 +21,7 @@
 
     "statusSuccessful":"成功",
     "statusRegisSuccessful":"账号注册成功.",
-    "statusPassResetSuccessful":"密码已成功修改."
+    "statusPassResetSuccessful":"密码已成功修改.",
+    "statusPaymentSuccessful":"付款成功",
+    "statusPaymentFail":"付款失败"
 }

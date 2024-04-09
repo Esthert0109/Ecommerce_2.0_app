@@ -6,6 +6,7 @@
     "mine": "Mine",
     "usernameHint": "Enter Username",
     "passwordhint": "Enter Password",
+    "searchHint": "Seach by keywords...",
 
     "valiUsernameNoEmpty": "Username cannot be empty",
     "valiUsernameAtLeast3": "Username must be at least 3 characters long",
@@ -20,6 +21,8 @@
 
     "statusSuccessful":"Successful",
     "statusRegisSuccessful":"Register Successful.",
-    "statusPassResetSuccessful":"Password Reset Successful."
+    "statusPassResetSuccessful":"Password Reset Successful.",
+    "statusPaymentSuccessful":"Payment Successful.",
+    "statusPaymentFail":"Payment Fail"
     
 }

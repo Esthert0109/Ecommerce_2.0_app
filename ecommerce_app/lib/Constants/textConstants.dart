@@ -60,6 +60,14 @@ const tTagUnselectionSelectedText = TextStyle(
     fontSize: 14, fontWeight: FontWeight.w400, color: kMainBlackColor);
 const tInventorySelectionTitleText = TextStyle(
     fontSize: 12, fontWeight: FontWeight.w400, color: kMainBlackColor);
+const tCategorySelectionSelectedText = TextStyle(
+    fontSize: 16, fontWeight: FontWeight.w700, color: kMainBlackColor);
+const tCategoryUnselectionSelectedText = TextStyle(
+    fontSize: 16, fontWeight: FontWeight.w500, color: kCategoryUnselectedColor);
+const tStatusSelectionTitleText = TextStyle(
+    fontSize: 16, fontWeight: FontWeight.w400, color: kMainBlackColor);
+const tStatusUnselectionTitleText = TextStyle(
+    fontSize: 14, fontWeight: FontWeight.w400, color: kCategoryUnselectedColor);
 
 // Title
 const tTitleSelectedText = TextStyle(
@@ -76,6 +84,10 @@ const tStatusFieldText = TextStyle(
     fontSize: 30, fontWeight: FontWeight.w700, color: kMainBlackColor);
 const tOrderStatusSelectionText = TextStyle(
     fontSize: 12, fontWeight: FontWeight.w400, color: kMainBlackColor);
+const tStatusFieldText2 = TextStyle(
+    fontSize: 18, fontWeight: FontWeight.w700, color: kMainBlackColor);
+const tStatusFieldText3 = TextStyle(
+    fontSize: 18, fontWeight: FontWeight.w400, color: kMainBlackColor);
 
 // Badge
 const tBadgesText = TextStyle(

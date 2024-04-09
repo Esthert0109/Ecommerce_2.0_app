@@ -44,7 +44,7 @@ class _SecondaryButtonComponentState extends State<SecondaryButtonComponent> {
               borderRadius: BorderRadius.circular(widget.radius)),
           side:
               BorderSide(color: widget.borderColor, width: widget.borderWidth)),
-      onPressed: () {},
+      onPressed: widget.onPressed,
       child: Text(
         widget.buttonText,
         style: widget.buttonTextStyle,
