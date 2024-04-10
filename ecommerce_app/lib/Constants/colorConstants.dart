@@ -66,3 +66,6 @@ const kInputFormFieldColor1 = Color(0xFFF5F5F5);
 
 // Badge Color
 const kBadgeColor = Color(0xffDA4827);
+
+//perk
+const kPointColor1 = Color(0xFF6CB25D);
