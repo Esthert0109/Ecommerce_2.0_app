@@ -8,7 +8,7 @@ class InventoryTitleComponent extends StatefulWidget {
   final String productSold;
 
   InventoryTitleComponent({
-    Key? key, // Added Key? key
+    Key? key,
     required this.productTitle,
     required this.price,
     required this.productSold,
@@ -28,10 +28,10 @@ class _InventoryTitleComponentState extends State<InventoryTitleComponent> {
       height: 110,
       width: 350,
       child: Container(
-        padding: EdgeInsets.all(12),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.all(12),
+        decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(20)),
-            color: Colors.white),
+            color: kMainWhiteColor),
         child: Column(
           children: [
             Text(
@@ -44,7 +44,7 @@ class _InventoryTitleComponentState extends State<InventoryTitleComponent> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(
+                  const Text(
                     "RM",
                     style: tPostInventoryPriceText3,
                   ),
@@ -67,7 +67,7 @@ class _InventoryTitleComponentState extends State<InventoryTitleComponent> {
                   Align(
                     alignment: Alignment.bottomRight,
                     child: IconButton(
-                      highlightColor: Colors.transparent,
+                      highlightColor: kSecondaryButtonColor6,
                       padding: EdgeInsets.only(top: 18),
                       icon: Icon(
                         size: 24,

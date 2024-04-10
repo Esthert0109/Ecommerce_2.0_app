@@ -4,7 +4,9 @@ import 'package:ecommerce_app/Components/Common/Selection/categorySelectionCompo
 import 'package:ecommerce_app/Components/Common/Selection/statusSelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
 import 'package:ecommerce_app/Components/Inventory/InventoryTitleComponent.dart';
+import 'package:ecommerce_app/Components/Post/postComponent.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
@@ -27,6 +29,7 @@ import '../../Components/Common/Status/statusComponent.dart';
 import '../../Components/Inventory/InventorySelectionComponent2.dart';
 import '../../Components/Perk/pointCardComponent.dart';
 import '../../Components/Post/postInventoryComponent.dart';
+import '../../Components/Post/post.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
@@ -698,6 +701,25 @@ class _ExamplesPageState extends State<ExamplesPage> {
                     "New Tea Alpine Yunwu Green Tea Maojian Tea Strong Flavor Canned Bulk Green Tea",
                 price: "60.45",
                 productSold: "245"),
+            Divider(),
+            Text("Post Component Example:"),
+            SizedBox(
+              height: 500,
+              child: MasonryGridView.count(
+                itemCount: posts.length,
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                itemBuilder: (context, index) {
+                  return PostComponent(
+                    postImg: posts[index].postImg,
+                    postTitle: posts[index].postTitle,
+                    postProfileImg: posts[index].postProfileImg,
+                    postProfileName: posts[index].postProfileName,
+                  );
+                },
+              ),
+            ),
             Divider(),
             SizedBox(height: 50),
           ],
