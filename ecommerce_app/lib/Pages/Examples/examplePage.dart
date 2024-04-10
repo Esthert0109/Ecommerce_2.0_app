@@ -4,6 +4,7 @@ import 'package:ecommerce_app/Components/Common/Selection/categorySelectionCompo
 import 'package:ecommerce_app/Components/Common/Selection/statusSelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
 import 'package:ecommerce_app/Components/Inventory/InventoryTitleComponent.dart';
+import 'package:ecommerce_app/Components/Point/invitationComnponent.dart';
 import 'package:ecommerce_app/Components/Post/postComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -720,6 +721,10 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 },
               ),
             ),
+            Divider(),
+            Text("Invitation Component Example:"),
+            SizedBox(height: 10),
+            InvitationComponent(),
             Divider(),
             SizedBox(height: 50),
           ],
