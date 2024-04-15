@@ -3,6 +3,7 @@ import 'package:ecommerce_app/Components/Common/SearchBar/searchbarComponent.dar
 import 'package:ecommerce_app/Components/Common/Selection/categorySelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Selection/statusSelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
+import 'package:ecommerce_app/Components/Inventory/InventorySelectionComponent.dart';
 import 'package:ecommerce_app/Components/Inventory/InventoryTitleComponent.dart';
 import 'package:ecommerce_app/Components/Order/OrderComponent.dart';
 import 'package:ecommerce_app/Components/Perk/pointHistory.dart';
@@ -750,6 +751,14 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 orderQuantity: "1",
                 isProcess: false,
                 isPoint: false),
+            Divider(),
+            Text("Inventory Selection Component:"),
+            InventorySelectionComponent(
+                productImage:
+                    "https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg",
+                productTitle: "茶姬",
+                price: "15.00",
+                productQuantity: "0"),
             Divider(),
             SizedBox(height: 50),
           ],
