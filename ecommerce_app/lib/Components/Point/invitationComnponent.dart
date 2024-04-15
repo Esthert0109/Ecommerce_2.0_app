@@ -19,10 +19,12 @@ class _InvitationComponentState extends State<InvitationComponent> {
       height: 40,
       padding: EdgeInsets.all(6),
       decoration: BoxDecoration(
+          border: Border.all(color: kBorderColor, width: 1),
           color: kMainWhiteColor,
           borderRadius: BorderRadius.all(Radius.circular(4))),
       child: Row(
         children: [
+          SizedBox(width: 5),
           Text(
             "邀请朋友以获得积分",
             style: tPerkCardText2,

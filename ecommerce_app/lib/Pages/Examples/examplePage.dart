@@ -706,6 +706,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 productSold: "245"),
             Divider(),
             Text("Post Component Example:"),
+            SizedBox(height: 10),
             SizedBox(
               height: 500,
               child: MasonryGridView.count(
@@ -747,7 +748,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 orderPrice: '30.80',
                 orderSelection: "10PCS",
                 orderQuantity: "1",
-                isProcess: true,
+                isProcess: false,
                 isPoint: false),
             Divider(),
             SizedBox(height: 50),

@@ -71,9 +71,11 @@ class _PostComponentState extends State<PostComponent> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: IconButton(
-                        iconSize: 24,
+                        iconSize: 14,
                         onPressed: () {},
-                        icon: Icon(Icons.ios_share),
+                        icon: ImageIcon(
+                          AssetImage('assets/post/shareButton.png'),
+                        ),
                         color: kSecondaryButtonColor3,
                       ),
                     ),

@@ -33,12 +33,16 @@ class _InventoryTitleComponentState extends State<InventoryTitleComponent> {
             borderRadius: BorderRadius.all(Radius.circular(20)),
             color: kMainWhiteColor),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              widget.productTitle,
-              style: tStatusSelectionTitleText,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
+            Container(
+              width: 300,
+              child: Text(
+                widget.productTitle,
+                style: tStatusSelectionTitleText,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
             Expanded(
               child: Row(

@@ -155,41 +155,69 @@ class _OrderComponentsState extends State<OrderComponents> {
                             widget.isProcess
                                 ? Row(
                                     children: [
-                                      // Plus Icon
-                                      IconButton(
-                                        icon: Icon(Icons.add,
-                                            color: Colors.green),
-                                        onPressed: () {
-                                          setState(() {
-                                            count++; // Increment count
-                                          });
-                                        },
+                                      Container(
+                                        width: 18,
+                                        height: 18,
+                                        decoration: BoxDecoration(
+                                          color: kBackgroundGradientEnd,
+                                          borderRadius:
+                                              BorderRadius.circular(49),
+                                        ),
+                                        child: IconButton(
+                                          padding: EdgeInsets.only(bottom: 8),
+                                          icon: Icon(Icons.remove,
+                                              size: 18,
+                                              color: kSecondaryButtonColor3),
+                                          onPressed: () {
+                                            setState(() {
+                                              if (count > 0) {
+                                                count--; // Decrement count (prevent going negative)
+                                              }
+                                            });
+                                          },
+                                        ),
                                       ),
 
+                                      // Plus Icon
+                                      SizedBox(width: 8),
                                       // Number Display
                                       Text(
                                         count
                                             .toString(), // Display current count
                                         style: TextStyle(fontSize: 16.0),
                                       ),
+                                      SizedBox(width: 8),
+                                      Container(
+                                        width: 18,
+                                        height: 18,
+                                        decoration: BoxDecoration(
+                                          color: kBackgroundGradientEnd,
+                                          borderRadius:
+                                              BorderRadius.circular(49),
+                                        ),
+                                        child: IconButton(
+                                          padding: EdgeInsets.only(bottom: 8),
+                                          icon: Icon(Icons.add,
+                                              size: 18,
+                                              color: kSecondaryButtonColor3),
+                                          onPressed: () {
+                                            setState(() {
+                                              count++; // Increment count
+                                            });
+                                          },
+                                        ),
+                                      ),
 
                                       // Minus Icon
-                                      IconButton(
-                                        icon: Icon(Icons.remove,
-                                            color: Colors.red),
-                                        onPressed: () {
-                                          setState(() {
-                                            if (count > 0) {
-                                              count--; // Decrement count (prevent going negative)
-                                            }
-                                          });
-                                        },
-                                      ),
                                     ],
                                   )
                                 : Row(
                                     children: [
-                                      Text("数量", style: tOrderPriceText1),
+                                      Container(
+                                        padding: EdgeInsets.only(top: 10),
+                                        child: Text("数量: ",
+                                            style: tOrderPriceText1),
+                                      ),
                                       Container(
                                           margin:
                                               EdgeInsets.only(left: 5, top: 5),

@@ -162,6 +162,7 @@ const tPostInventoryTitleText6 = TextStyle(
 //Order
 const tOrderPriceText1 = TextStyle(
   fontSize: 10,
+  height: 1.2,
   fontWeight: FontWeight.w400,
   color: kCategoryUnselectedColor,
 );
