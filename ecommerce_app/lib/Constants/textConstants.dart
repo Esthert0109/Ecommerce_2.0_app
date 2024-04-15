@@ -107,6 +107,16 @@ const tPerkCardText2 = TextStyle(
   fontWeight: FontWeight.w500,
   color: kMainBlackColor,
 );
+const tPerkCardText3 =
+    TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: kPointColor1);
+
+const tPerkCardText4 = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  color: kSecondaryButtonColor3,
+);
+const tPerkCardText5 = TextStyle(
+    fontSize: 14, fontWeight: FontWeight.w500, color: kSecondaryButtonColor2);
 
 // Post Inventory
 const tPostInventoryTitleText = TextStyle(
@@ -133,6 +143,31 @@ const tPostInventoryPriceText4 = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
   color: kMainOrangeColor,
+);
+const tPostInventoryPriceText7 = TextStyle(
+  height: 1.2,
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  color: kSecondaryButtonColor2,
+);
+
+const tPostInventoryPriceText8 = TextStyle(
+  height: 1.1,
+  fontSize: 24,
+  fontWeight: FontWeight.w500,
+  color: kSecondaryButtonColor2,
+);
+
+const tPostInventoryPriceText5 = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  color: kSecondaryButtonColor3,
+);
+
+const tPostInventoryTitleText6 = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: kCategoryUnselectedColor,
 );
 const tInventorySoldText = TextStyle(
   fontSize: 12,
@@ -180,4 +215,24 @@ const tOrderStatusAddressNameText = TextStyle(
   fontSize: 10,
   fontWeight: FontWeight.w500,
   color: kMainGreyColor,
+);
+
+//Order
+const tOrderPriceText1 = TextStyle(
+  fontSize: 10,
+  height: 1.2,
+  fontWeight: FontWeight.w400,
+  color: kCategoryUnselectedColor,
+);
+
+const tOrderPriceText2 = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: kSecondaryButtonColor2,
+);
+
+const tOrderPriceText3 = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  color: kSecondaryButtonColor2,
 );

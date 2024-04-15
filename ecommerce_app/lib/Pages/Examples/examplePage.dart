@@ -4,7 +4,13 @@ import 'package:ecommerce_app/Components/Common/SearchBar/searchbarComponent.dar
 import 'package:ecommerce_app/Components/Common/Selection/categorySelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Selection/statusSelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
+import 'package:ecommerce_app/Components/Inventory/InventoryTitleComponent.dart';
+import 'package:ecommerce_app/Components/Order/OrderComponent.dart';
+import 'package:ecommerce_app/Components/Perk/pointHistory.dart';
+import 'package:ecommerce_app/Components/Point/invitationComnponent.dart';
+import 'package:ecommerce_app/Components/Post/postComponent.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
@@ -29,6 +35,7 @@ import '../../Components/Inventory/InventorySelectionComponent2.dart';
 import '../../Components/Inventory/inventoryComponent.dart';
 import '../../Components/Perk/pointCardComponent.dart';
 import '../../Components/Post/postInventoryComponent.dart';
+import '../../Components/Post/post.dart';
 import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 
@@ -821,6 +828,60 @@ class _ExamplesPageState extends State<ExamplesPage> {
               ],
             ),
             SizedBox(height: 20),
+            Divider(),
+            Text("Inventory Title Example:"),
+            SizedBox(height: 10),
+            InventoryTitleComponent(
+                productTitle:
+                    "New Tea Alpine Yunwu Green Tea Maojian Tea Strong Flavor Canned Bulk Green Tea",
+                price: "60.45",
+                productSold: "245"),
+            Divider(),
+            Text("Post Component Example:"),
+            SizedBox(height: 10),
+            SizedBox(
+              height: 500,
+              child: MasonryGridView.count(
+                itemCount: posts.length,
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                itemBuilder: (context, index) {
+                  return PostComponent(
+                    postImg: posts[index].postImg,
+                    postTitle: posts[index].postTitle,
+                    postProfileImg: posts[index].postProfileImg,
+                    postProfileName: posts[index].postProfileName,
+                  );
+                },
+              ),
+            ),
+            Divider(),
+            Text("Invitation Component Example:"),
+            SizedBox(height: 10),
+            InvitationComponent(),
+            PointHistory(
+                addPoint: true,
+                point: "20",
+                pointDetail: "购买的商品",
+                pointDate: "2023.05.05 09:20:00"),
+            PointHistory(
+                addPoint: false,
+                point: "20",
+                pointDetail: "购买的商品",
+                pointDate: "2023.05.05 09:20:00"),
+            Divider(),
+            Text("Order Component Example:"),
+            SizedBox(height: 10),
+            OrderComponents(
+                orderImg:
+                    "https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg",
+                orderTitle: '茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶茶姬茶姬茶茶',
+                orderPrice: '30.80',
+                orderSelection: "10PCS",
+                orderQuantity: "1",
+                isProcess: true,
+                isPoint: false),
             Divider(),
             SizedBox(height: 50),
           ],
