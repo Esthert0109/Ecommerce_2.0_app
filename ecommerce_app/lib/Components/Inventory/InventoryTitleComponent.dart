@@ -50,14 +50,14 @@ class _InventoryTitleComponentState extends State<InventoryTitleComponent> {
                 children: [
                   const Text(
                     "RM",
-                    style: tPostInventoryPriceText3,
+                    style: tPostInventoryPriceText7,
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Text(
                     widget.price,
-                    style: tPostInventoryPriceText4,
+                    style: tPostInventoryPriceText8,
                   ),
                   SizedBox(
                     width: 10,

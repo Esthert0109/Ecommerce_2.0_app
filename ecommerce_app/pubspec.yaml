@@ -72,6 +72,7 @@ flutter:
     - assets/selection/
     - assets/perk/
     - assets/inventory/
+    - assets/address/
     - assets/menu/
     - assets/point/
     - assets/post/

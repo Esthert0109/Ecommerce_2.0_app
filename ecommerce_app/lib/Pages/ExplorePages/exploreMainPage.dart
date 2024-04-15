@@ -14,6 +14,7 @@ import '../../Constants/colorConstants.dart';
 import '../../Constants/textConstants.dart';
 import 'package:badges/badges.dart' as badges;
 
+import '../Examples/exampleSlidingPageWithTitle.dart';
 import '../Examples/pageSlidingExample.dart';
 
 class ExploreMainPage extends StatefulWidget {
@@ -25,6 +26,7 @@ class ExploreMainPage extends StatefulWidget {
 
 class _ExploreMainPageState extends State<ExploreMainPage> {
   bool isDisable = true;
+  Color textColor = kSubmitButtonColor;
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +84,21 @@ class _ExploreMainPageState extends State<ExploreMainPage> {
                       isLoading: false,
                     ),
                   ),
-                  
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    width: 300,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    child: SubmitButtonComponent(
+                      buttonText: "Sliding example",
+                      buttonTextStyle: tSubmitButtonText,
+                      onPressed: () {
+                        Get.to(() => ExampleSlidingPageWithTitle(),
+                            transition: Transition.rightToLeft,
+                            duration: Duration(milliseconds: 300));
+                      },
+                      isLoading: false,
+                    ),
+                  ),
                 ]),
           ),
         ),

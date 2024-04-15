@@ -134,14 +134,25 @@ const tPostInventoryPriceText2 = TextStyle(
   fontWeight: FontWeight.w500,
   color: kMainBlackColor,
 );
-
 const tPostInventoryPriceText3 = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  color: kMainOrangeColor,
+);
+const tPostInventoryPriceText4 = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  color: kMainOrangeColor,
+);
+const tPostInventoryPriceText7 = TextStyle(
+  height: 1.2,
   fontSize: 16,
   fontWeight: FontWeight.w500,
   color: kSecondaryButtonColor2,
 );
 
-const tPostInventoryPriceText4 = TextStyle(
+const tPostInventoryPriceText8 = TextStyle(
+  height: 1.1,
   fontSize: 24,
   fontWeight: FontWeight.w500,
   color: kSecondaryButtonColor2,
@@ -157,6 +168,53 @@ const tPostInventoryTitleText6 = TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w400,
   color: kCategoryUnselectedColor,
+);
+const tInventorySoldText = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  color: kMainGreyColor,
+);
+const tDiscountText1 = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: kMainGreyColor,
+  decoration: TextDecoration.lineThrough,
+  decorationColor: kMainOrangeColor,
+  decorationThickness: 3.2,
+);
+const tDiscountText2 = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: kMainGreyColor,
+    decoration: TextDecoration.lineThrough,
+    decorationColor: kMainOrangeColor,
+    decorationThickness: 3.2);
+
+// Address
+const tAddressNameText = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: kMainBlackColor,
+);
+const tAddressPhoneText = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: kMainGreyColor,
+);
+const tFullAddressText = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  color: kMainBlackColor,
+);
+const tCreateAddressText = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+  color: kMainBlackColor,
+);
+const tOrderStatusAddressNameText = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+  color: kMainGreyColor,
 );
 
 //Order
