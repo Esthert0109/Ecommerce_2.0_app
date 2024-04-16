@@ -34,6 +34,7 @@ import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
 import '../../Components/Inventory/InventorySelectionComponent2.dart';
 import '../../Components/Inventory/inventoryComponent.dart';
+import '../../Components/Inventory/inventory.dart';
 import '../../Components/Perk/pointCardComponent.dart';
 import '../../Components/Post/postInventoryComponent.dart';
 import '../../Components/Post/post.dart';
@@ -57,6 +58,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
   int categroySelection = 0;
   int statusSelection = 0;
   int inventorySelection = 0;
+  int inventory2Selection = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -885,12 +887,32 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 isPoint: false),
             Divider(),
             Text("Inventory Selection Component:"),
-            InventorySelectionComponent(
-                productImage:
-                    "https://chagee.com.my/wp-content/uploads/2022/08/Chagee-Fresh-Milk-Tea-Series.jpg",
-                productTitle: "茶姬",
-                price: "15.00",
-                productQuantity: "0"),
+            SizedBox(height: 20),
+            SizedBox(
+              height: 300,
+              child: MasonryGridView.count(
+                itemCount: 1,
+                crossAxisCount: 1,
+                mainAxisSpacing: 1,
+                crossAxisSpacing: 1,
+                itemBuilder: (context, index) {
+                  return InventorySelectionComponent(
+                    productImage:
+                        inventory2.map((item) => item.imageUrl).toList(),
+                    productTitle: inventory2.map((item) => item.title).toList(),
+                    productQuantity: inventory2
+                        .map((item) => item.quantity.toString())
+                        .toList(), // Convert quantity to string for display
+                    selectedIndex: inventory2Selection,
+                    onTap: (index) {
+                      setState(() {
+                        inventory2Selection = index;
+                      });
+                    },
+                  );
+                },
+              ),
+            ),
             Divider(),
             SizedBox(height: 50),
           ],
