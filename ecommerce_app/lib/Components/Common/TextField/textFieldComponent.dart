@@ -13,7 +13,7 @@ class TextFieldComponent extends StatefulWidget {
   final bool isPassword;
 
   TextFieldComponent({
-    Key? key, // Added Key? key
+    Key? key,
     required this.controller,
     this.validator,
     required this.onChanged,
