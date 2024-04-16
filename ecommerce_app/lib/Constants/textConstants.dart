@@ -68,6 +68,10 @@ const tStatusSelectionTitleText = TextStyle(
     fontSize: 16, fontWeight: FontWeight.w400, color: kMainBlackColor);
 const tStatusUnselectionTitleText = TextStyle(
     fontSize: 14, fontWeight: FontWeight.w400, color: kCategoryUnselectedColor);
+const tInventoryUnselectionText = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: kSecondaryDisableButtonTextColor);
 
 // Title
 const tTitleSelectedText = TextStyle(
@@ -144,6 +148,19 @@ const tPostInventoryPriceText4 = TextStyle(
   fontWeight: FontWeight.w500,
   color: kMainOrangeColor,
 );
+
+const tPostInventoryPriceText5 = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  color: kSecondaryButtonColor3,
+);
+
+const tPostInventoryTitleText6 = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: kCategoryUnselectedColor,
+);
+
 const tPostInventoryPriceText7 = TextStyle(
   height: 1.2,
   fontSize: 16,
@@ -156,18 +173,6 @@ const tPostInventoryPriceText8 = TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.w500,
   color: kSecondaryButtonColor2,
-);
-
-const tPostInventoryPriceText5 = TextStyle(
-  fontSize: 12,
-  fontWeight: FontWeight.w400,
-  color: kSecondaryButtonColor3,
-);
-
-const tPostInventoryTitleText6 = TextStyle(
-  fontSize: 14,
-  fontWeight: FontWeight.w400,
-  color: kCategoryUnselectedColor,
 );
 const tInventorySoldText = TextStyle(
   fontSize: 12,

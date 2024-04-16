@@ -4,6 +4,7 @@ import 'package:ecommerce_app/Components/Common/SearchBar/searchbarComponent.dar
 import 'package:ecommerce_app/Components/Common/Selection/categorySelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Selection/statusSelectionComponent.dart';
 import 'package:ecommerce_app/Components/Common/Status/status2Component.dart';
+import 'package:ecommerce_app/Components/Inventory/InventorySelectionComponent.dart';
 import 'package:ecommerce_app/Components/Inventory/InventoryTitleComponent.dart';
 import 'package:ecommerce_app/Components/Order/OrderComponent.dart';
 import 'package:ecommerce_app/Components/Perk/pointHistory.dart';
@@ -33,6 +34,7 @@ import '../../Components/Common/TextField/textFieldComponent.dart';
 import '../../Components/Common/Status/statusComponent.dart';
 import '../../Components/Inventory/InventorySelectionComponent2.dart';
 import '../../Components/Inventory/inventoryComponent.dart';
+import '../../Components/Inventory/inventory.dart';
 import '../../Components/Perk/pointCardComponent.dart';
 import '../../Components/Post/postInventoryComponent.dart';
 import '../../Components/Post/post.dart';
@@ -56,6 +58,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
   int categroySelection = 0;
   int statusSelection = 0;
   int inventorySelection = 0;
+  int inventory2Selection = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -882,6 +885,34 @@ class _ExamplesPageState extends State<ExamplesPage> {
                 orderQuantity: "1",
                 isProcess: true,
                 isPoint: false),
+            Divider(),
+            Text("Inventory Selection Component:"),
+            SizedBox(height: 20),
+            SizedBox(
+              height: 300,
+              child: MasonryGridView.count(
+                itemCount: 1,
+                crossAxisCount: 1,
+                mainAxisSpacing: 1,
+                crossAxisSpacing: 1,
+                itemBuilder: (context, index) {
+                  return InventorySelectionComponent(
+                    productImage:
+                        inventory2.map((item) => item.imageUrl).toList(),
+                    productTitle: inventory2.map((item) => item.title).toList(),
+                    productQuantity: inventory2
+                        .map((item) => item.quantity.toString())
+                        .toList(), // Convert quantity to string for display
+                    selectedIndex: inventory2Selection,
+                    onTap: (index) {
+                      setState(() {
+                        inventory2Selection = index;
+                      });
+                    },
+                  );
+                },
+              ),
+            ),
             Divider(),
             SizedBox(height: 50),
           ],

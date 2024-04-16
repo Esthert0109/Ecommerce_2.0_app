@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/Pages/Examples/examplePage.dart';
+import 'package:ecommerce_app/Pages/Examples/examplePage2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -54,7 +55,7 @@ class _ExploreMainPageState extends State<ExploreMainPage> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                       child: SubmitButtonComponent(
-                        buttonText: "Example Page",
+                        buttonText: "Example Page 1",
                         buttonTextStyle: tSubmitButtonText,
                         onPressed: () {
                           Navigator.push(
@@ -64,6 +65,27 @@ class _ExploreMainPageState extends State<ExploreMainPage> {
                                 context,
                               ) =>
                                   ExamplesPage(),
+                            ),
+                          );
+                        },
+                        isLoading: false,
+                      )),
+                  Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      child: SubmitButtonComponent(
+                        buttonText: "Example Page 2",
+                        buttonTextStyle: tSubmitButtonText,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (
+                                context,
+                              ) =>
+                                  ExamplePage2(),
                             ),
                           );
                         },
