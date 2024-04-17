@@ -23,5 +23,7 @@
     "statusRegisSuccessful":"账号注册成功.",
     "statusPassResetSuccessful":"密码已成功修改.",
     "statusPaymentSuccessful":"付款成功",
-    "statusPaymentFail":"付款失败"
+    "statusPaymentFail":"付款失败",
+    "statusWaitPayment":"等待付款中",
+    "statusWaitReceiving":"待发货"
 }

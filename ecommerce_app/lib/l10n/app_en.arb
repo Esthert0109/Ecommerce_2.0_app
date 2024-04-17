@@ -23,6 +23,8 @@
     "statusRegisSuccessful":"Register Successful.",
     "statusPassResetSuccessful":"Password Reset Successful.",
     "statusPaymentSuccessful":"Payment Successful.",
-    "statusPaymentFail":"Payment Fail"
+    "statusPaymentFail":"Payment Fail",
+    "statusWaitPayment":"Waiting payment",
+    "statusWaitReceiving":"Waiting dispatch"
     
 }
