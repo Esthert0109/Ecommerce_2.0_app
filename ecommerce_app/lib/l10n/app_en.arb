@@ -25,6 +25,43 @@
     "statusPaymentSuccessful":"Payment Successful.",
     "statusPaymentFail":"Payment Fail",
     "statusWaitPayment":"Waiting payment",
-    "statusWaitReceiving":"Waiting dispatch"
+    "statusWaitReceiving":"Waiting dispatch",
+
+    "addressReceiverName": "Recipient's Name",
+    "addressReceiverNameNoEmpty": "Recipient's name cannot be empty",
+    "addressReceiverNameAtLeast3": "Recipient's name should be at least 3 characters",
+    "addressReceiverNameNoStartSpace": "Recipient's name cannot start with a space",
+    "addressReceiverNameNoContiSpace": "Recipient's name cannot contain consecutive spaces",
+
+    "addressReceiverPhone": "Phone Number",
+    "addressReceiverPhoneNotCor": "Please enter a valid phone number",
+    "addressReceiverPhoneAtLeast3": "Phone number should be at least 3 characters",
+    "addressReceiverPhoneNoStartSpace": "Phone number cannot start with a space",
+    "addressReceiverPhoneNoContiSpace": "Phone number cannot contain consecutive spaces",
+    "addressReceiverPhoneNoEmpty":"Phone number cannot be empty",
+
+    "addressReceiverAddress": "Address",
+    "addressReceiverAddressNoEmpty": "Address cannot be empty",
+    "addressReceiverAddressAtLeast3": "Address should be at least 3 characters",
+    "addressReceiverAddressNoStartSpace": "Address cannot start with a space",
+    "addressReceiverAddressNoContiSpace": "Address cannot contain consecutive spaces",
+
+    "addressReceiverCity": "City",
+    "addressReceiverCityNoEmpty": "City cannot be empty",
+    "addressReceiverCityAtLeast3": "City should be at least 3 characters",
+    "addressReceiverCityNoStartSpace": "City cannot start with a space",
+    "addressReceiverCityNoContiSpace": "City cannot contain consecutive spaces",
+
+    "addressReceiverState": "State",
+    "addressReceiverStateNoEmpty": "State cannot be empty",
+    "addressReceiverStateAtLeast3": "State should be at least 3 characters",
+    "addressReceiverStateNoStartSpace": "State cannot start with a space",
+    "addressReceiverStateNoContiSpace": "State cannot contain consecutive spaces",
+    
+    "addressReceiverCode": "Postal Code",
+    "addressReceiverCodeNoEmpty": "Postal code cannot be empty",
+    "addressReceiverCodeAtLeast3": "Postal code should be at least 4 characters",
+    "addressReceiverCodeNoStartSpace": "Postal code cannot start with a space",
+    "addressReceiverCodeNoContiSpace": "Postal code cannot contain consecutive spaces"
     
 }

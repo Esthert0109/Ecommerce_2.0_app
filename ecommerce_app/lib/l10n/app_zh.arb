@@ -25,5 +25,44 @@
     "statusPaymentSuccessful":"付款成功",
     "statusPaymentFail":"付款失败",
     "statusWaitPayment":"等待付款中",
-    "statusWaitReceiving":"待发货"
+    "statusWaitReceiving":"待发货",
+
+    "addressReceiverName":"收货人名称",
+    "addressReceiverNameNoEmpty":"收货人不能为空",
+    "addressReceiverNameAtLeast3":"收货人至少需要3个字符",
+    "addressReceiverNameNoStartSpace":"收货人不能以空格开头",
+    "addressReceiverNameNoContiSpace":"收货人不能包含连续的空格",
+
+    "addressReceiverPhone":"手机号码",
+    "addressReceiverPhoneNotCor":"请输入正确的手机号码",
+    "addressReceiverPhoneAtLeast3":"收货人至少需要3个字符",
+    "addressReceiverPhoneNoStartSpace":"手机号码不能以空格开头",
+    "addressReceiverPhoneNoContiSpace":"手机号码不能包含连续的空格",
+    "addressReceiverPhoneNoEmpty":"手机号码不能为空",
+
+    "addressReceiverAddress":"地址",
+    "addressReceiverAddressNoEmpty":"地址不能为空",
+    "addressReceiverAddressAtLeast3":"地址至少需要3个字符",
+    "addressReceiverAddressNoStartSpace":"地址不能以空格开头",
+    "addressReceiverAddressNoContiSpace":"地址不能包含连续的空格",
+
+    "addressReceiverCity":"城市",
+    "addressReceiverCityNoEmpty":"城市不能为空",
+    "addressReceiverCityAtLeast3":"城市至少需要3个字符",
+    "addressReceiverCityNoStartSpace":"城市不能以空格开头",
+    "addressReceiverCityNoContiSpace":"城市不能包含连续的空格",
+
+    "addressReceiverState":"州属",
+    "addressReceiverStateNoEmpty":"州属不能为空",
+    "addressReceiverStateAtLeast3":"州属至少需要3个字符",
+    "addressReceiverStateNoStartSpace":"州属不能以空格开头",
+    "addressReceiverStateNoContiSpace":"州属不能包含连续的空格",
+
+    "addressReceiverCode":"邮政编码",
+    "addressReceiverCodeNoEmpty":"邮政编码不能为空",
+    "addressReceiverCodeAtLeast3":"邮政编码至少需要4个字符",
+    "addressReceiverCodeNoStartSpace":"邮政编码不能以空格开头",
+    "addressReceiverCodeNoContiSpace":"邮政编码不能包含连续的空格"
+    
+    
 }

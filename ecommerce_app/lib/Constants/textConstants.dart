@@ -206,6 +206,12 @@ const tAddressPhoneText = TextStyle(
   fontWeight: FontWeight.w400,
   color: kMainGreyColor,
 );
+const tAddressPhoneText2 = TextStyle(
+  height: 0.5,
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: kMainGreyColor,
+);
 const tFullAddressText = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w400,

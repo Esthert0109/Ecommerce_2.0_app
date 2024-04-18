@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Constants/colorConstants.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../Constants/textConstants.dart';
 
 class DeliveryStatusComponent extends StatefulWidget {

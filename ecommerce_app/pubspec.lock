@@ -73,6 +73,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  equatable:
+    dependency: transitive
+    description:
+      name: equatable
+      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -102,6 +110,46 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_libphonenumber:
+    dependency: "direct main"
+    description:
+      name: flutter_libphonenumber
+      sha256: "72d73e4d7beae20454ff2fa5d146d38ebfeec363bd98907263379984a723df4a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.2"
+  flutter_libphonenumber_android:
+    dependency: transitive
+    description:
+      name: flutter_libphonenumber_android
+      sha256: "95e0379daa458e273cef4448db7ead8df5481c40d660c261cc74eff89c394b40"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  flutter_libphonenumber_ios:
+    dependency: transitive
+    description:
+      name: flutter_libphonenumber_ios
+      sha256: "5b786a9e5edcc500c3197ac387e94e7deb0e5cd9a69194152c9a2bd150cdb4df"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.1"
+  flutter_libphonenumber_platform_interface:
+    dependency: transitive
+    description:
+      name: flutter_libphonenumber_platform_interface
+      sha256: "5ae1d2f8f19f53221b5f4d87e752a5799b7bf2670c970b3edbb73f26895442dc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  flutter_libphonenumber_web:
+    dependency: transitive
+    description:
+      name: flutter_libphonenumber_web
+      sha256: "271159e874f7a3b3b7a5090ff4323e6f4b0dc7552b54805e145f5e07ef01e930"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -189,6 +237,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.18.1"
+  intl_phone_number_input:
+    dependency: "direct main"
+    description:
+      name: intl_phone_number_input
+      sha256: "1c4328713a9503ab26a1fdbb6b00b4cada68c18aac922b35bedbc72eff1297c3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.4"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.7"
   leak_tracker:
     dependency: transitive
     description:
@@ -213,6 +277,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  libphonenumber_platform_interface:
+    dependency: transitive
+    description:
+      name: libphonenumber_platform_interface
+      sha256: f801f6c65523f56504b83f0890e6dad584ab3a7507dca65fec0eed640afea40f
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.2"
+  libphonenumber_plugin:
+    dependency: transitive
+    description:
+      name: libphonenumber_plugin
+      sha256: c615021d9816fbda2b2587881019ed595ecdf54d999652d7e4cce0e1f026368c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.3"
+  libphonenumber_web:
+    dependency: transitive
+    description:
+      name: libphonenumber_web
+      sha256: "8186f420dbe97c3132283e52819daff1e55d60d6db46f7ea5ac42f42a28cc2ef"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.2"
   lints:
     dependency: transitive
     description:
